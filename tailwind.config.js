@@ -6,7 +6,6 @@ module.exports = {
       screens: {
         xss: '400px',
       },
-      colors: {},
       fontFamily: {
         NunitoSans: ['Nunito Sans', 'sans-serif'],
         fjalla_one: ['Fjalla One', 'sans-serif'],
@@ -20,7 +19,16 @@ module.exports = {
         electrolize: ['Electrolize', 'sans-serif'],
         kalam: ['Kalam', 'sans-serif'],
       },
+    },
+    colors:{
+      primary:"#C89963",
+      secondary:"#FFECD6",
+      headline:"#2C4364",
+      paragraph:"#939393",
+      white:"#fff",
+      black:"#000"
     }
+
   },
   plugins: [],
 }

@@ -14,7 +14,6 @@ const titles = {
   [PROFILE]: 'Profile'
 }
 
-
 function Main() {
  const {pathname} = useLocation()
   
@@ -29,23 +28,23 @@ function Main() {
         </div>
         {/* tab bar part */}
         <div style={{height: TAB_BAR_HEIGHT}} className='h-16 flex justify-between bg-white fixed bottom-0 w-screen px-3'>
-          <NavLink to={HOME} className={({isActive})=>`flex flex-col justify-center items-center  ${isActive ?"stroke-orange-300 text-orange-300": "stroke-gray-500 text-gray-500" }`}>
+          <NavLink to={HOME} className={({isActive})=>`flex flex-col justify-center items-center  ${isActive ?"stroke-primary text-primary": "stroke-paragraph text-paragraph" }`}>
             <HomeIcon className=' size-7 cursor-pointer'/>
             <span className='text-xs'>Home</span>
           </NavLink>
-          <NavLink to={ASSIGNED} className={({isActive})=>`flex flex-col justify-center items-center ${isActive ?"stroke-orange-300 text-orange-300": "stroke-gray-500 text-gray-500" }`}>
+          <NavLink to={ASSIGNED} className={({isActive})=>`flex flex-col justify-center items-center ${isActive ?"stroke-primary text-primary": "stroke-paragraph text-paragraph" }`}>
             <AssignedIcon className='size-7 cursor-pointer'/>
             <span className='text-xs'>Assigned</span>
           </NavLink>
-          <NavLink to={NEW_ASSIGNED}  className={({isActive})=>`flex flex-col justify-center items-center  ${isActive ?"stroke-orange-300 text-orange-300": "stroke-gray-500 text-gray-500" }`}>
+          <NavLink to={NEW_ASSIGNED}  className={({isActive})=>`flex flex-col justify-center items-center  ${isActive ?"stroke-primary text-primary": "stroke-paragraph text-paragraph" }`}>
             <NewAssignedIcon className=' size-7 cursor-pointer'/>
             <span className='text-xs'>New Assigned</span>
           </NavLink>
-          <NavLink to={KNOWLEDGE}  className={({isActive})=>`flex flex-col justify-center items-center  ${isActive ?"fill-orange-300 text-orange-300": "fill-gray-500 text-gray-500" }`}>
+          <NavLink to={KNOWLEDGE}  className={({isActive})=>`flex flex-col justify-center items-center  ${isActive ?"fill-primary text-primary": "fill-paragraph text-paragraph" }`}>
             <KnowledgeIcon className=' size-7 cursor-pointer'/>
             <span className='text-xs'>Knowledge Base</span>
           </NavLink>
-          <NavLink to={PROFILE}  className={({isActive})=>`flex flex-col justify-center items-center ${isActive ?"stroke-orange-300 text-orange-300": "stroke-gray-500 text-gray-500" }`}>
+          <NavLink to={PROFILE}  className={({isActive})=>`flex flex-col justify-center items-center ${isActive ?"stroke-primary text-primary": "stroke-paragraph text-paragraph" }`}>
             <ProfileIcon className='size-7 cursor-pointer'/>
             <span className='text-xs'>Profile</span>
           </NavLink>
