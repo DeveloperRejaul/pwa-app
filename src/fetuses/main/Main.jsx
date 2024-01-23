@@ -27,7 +27,7 @@ function Main() {
           <Outlet/>
         </div>
         {/* tab bar part */}
-        <div style={{height: TAB_BAR_HEIGHT}} className='h-16 flex justify-between bg-white fixed bottom-0 w-screen px-3'>
+        <div style={{height: TAB_BAR_HEIGHT}} className='h-16 flex justify-around bg-white fixed bottom-0 w-screen px-3'>
           <NavLink to={HOME} className={({isActive})=>`flex flex-col justify-center items-center  ${isActive ?"stroke-primary text-primary": "stroke-paragraph text-paragraph" }`}>
             <HomeIcon className=' size-7 cursor-pointer'/>
             <span className='text-xs'>Home</span>
