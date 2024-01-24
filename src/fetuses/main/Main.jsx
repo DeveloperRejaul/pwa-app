@@ -14,7 +14,6 @@ const titles = {
   [PROFILE]: 'Profile'
 }
 
-
 function Main() {
   const { pathname } = useLocation()
   const route = pathname.slice(1);
