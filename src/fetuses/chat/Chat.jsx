@@ -8,7 +8,7 @@ const Chat = () => {
     return (
         <div className='px-5 h-screen relative w-screen'>
             <Header data={{ name: ' Plot Name - Advisory', status: 'Online', image: profile }} />
-            <div className="space-y-7 overflow-y-auto w-full px-2 h-[85vh] ">
+            <div className="space-y-7 overflow-y-auto w-full px-2 h-[85vh] no-scrollbar ">
                 <div className='bg-[#C8996333] w-[5.44rem] mx-auto rounded-full p-[6px] text-center text-headline text-[8px]'>
                     <p className="">21 Mar 2023</p>
                 </div>
