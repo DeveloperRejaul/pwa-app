@@ -6,8 +6,8 @@ const Header = ({ data }) => {
         <div className='py-3 flex gap-6 items-center '>
             <img src={arrow} alt="back" />
             <div className="flex gap-2 items-center">
-                <div className="rounded-full h-10 w-10  overflow-hidden border border-primary ">
-                    <img className='h-full w-auto' src={image} alt="" />
+                <div className="rounded-full h-10 w-10 p-[2px] overflow-hidden border border-primary ">
+                    <img className='h-full w-auto rounded-full' src={image} alt="" />
                 </div>
                 <div className="">
                     <p className="text-lg font-manrope font-semibold text-headline">
