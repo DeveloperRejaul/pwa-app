@@ -12,6 +12,7 @@ module.exports = {
         headline: "#2C4364",
         paragraph: "#939393",
         light: '#F1F1F1',
+        gray: '#838FA0',
         border: '#EAECF0'
       },
       fontFamily: {
