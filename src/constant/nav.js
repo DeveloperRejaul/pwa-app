@@ -5,4 +5,5 @@ export const NAV_PATH = {
     NEW_ASSIGNED: '/new-assigned',
     KNOWLEDGE: '/knowledge',
     CHAT: '/chat',
+    KNOWLEDGE_DETAILS:'/knowledge-details',
 }
