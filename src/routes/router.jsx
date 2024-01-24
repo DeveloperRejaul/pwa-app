@@ -6,6 +6,7 @@ import Assigned from "../fetuses/assigned/Assigned";
 import NewAssigned from "../fetuses/newAssigned/NewAssigned";
 import Knowledge from "../fetuses/knowledge/Knowledge";
 import Profile from "../fetuses/profile/Profile";
+import Chat from "../fetuses/chat/Chat";
 import { NAV_PATH } from "../constant/nav";
 
 export const router = createBrowserRouter([
@@ -32,6 +33,10 @@ export const router = createBrowserRouter([
             {
                 path:NAV_PATH.PROFILE,
                 element:<Profile/>
+            },
+            {
+                path:NAV_PATH.CHAT,
+                element: <Chat />
             },
         ]
     }
