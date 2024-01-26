@@ -3,6 +3,7 @@ import Bubble from './Bubble';
 import Sender from './Sender';
 import Header from './Header';
 import profile from '../../asset/Images/profile_picture.jpg';
+
 const chat = [
     { text: "Lorem ipsum dolor sit amet, con sec tetur adipiscing elit. ", time: '1/26/2024, 2:09:56 PM', user: "self" },
     { text: "Lorem ipsum dolor sit amet ", time: '1/26/2024, 2:09:56 PM', user: "user" },
@@ -14,6 +15,7 @@ const chat = [
     { text: "Lorem ipsum dolor sit amet, con sec tetur adipiscing elit. ", time: '1/26/2024, 2:09:56 PM', user: "self" },
 ]
 const Chat = () => {
+
     const [chats, setChats] = useState(chat);
     const bottomRef = useRef();
     const submitHandler = (data) => {

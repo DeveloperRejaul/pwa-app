@@ -1,5 +1,5 @@
 import React from 'react';
-import arrow from '../../asset/icon/Arrow-right.svg';
+import { Arrow } from '../../asset/icon/index'
 const ProductCard = ({ product }) => {
     const { image, title, price, category } = product
     return (
@@ -15,7 +15,7 @@ const ProductCard = ({ product }) => {
                 <div className="flex items-center justify-between px-2 pb-3">
                     <p className="text-gray text-xs font-manrope">{category}</p>
                     <button onClick={() => { console.log(product) }} type="button">
-                        <img src={arrow} />
+                        <Arrow className='rotate-180 stroke-primary' />
                     </button>
                 </div>
             </div>
