@@ -18,5 +18,10 @@
       "typescriptreact"
     ],
     "editor.formatOnSave": true,
-    "cSpell.words": ["actualy"]
+    "cSpell.words": [
+      "actualy"
+    ],
+    "[css]": {
+      "editor.defaultFormatter": "vscode.css-language-features"
+    }
   }
