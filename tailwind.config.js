@@ -6,8 +6,17 @@ module.exports = {
       screens: {
         xss: '400px',
       },
-      colors: {},
+      colors: {
+        primary: "#C89963",
+        secondary: "#FFECD6",
+        headline: "#2C4364",
+        paragraph: "#939393",
+        light: '#F1F1F1',
+        gray: '#838FA0',
+        border: '#EAECF0'
+      },
       fontFamily: {
+        manrope:["Manrope", 'sans-serif'],
         NunitoSans: ['Nunito Sans', 'sans-serif'],
         fjalla_one: ['Fjalla One', 'sans-serif'],
         libre_baskerville: ['Libre Baskerville', 'sans-serif'],
