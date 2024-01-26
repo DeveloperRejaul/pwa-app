@@ -21,7 +21,7 @@ function Main() {
   return (
     <div className='h-screen overflow-hidden'>
       {/* header part */}
-      {route == 'chat' || route == 'knowledge' ? null : <p style={{ height: TITLE_HEIGHT }} className='font-bold text-2xl bg-gray-100 text-gray-700 text-center h-10'>{titles[pathname]}</p>}
+      {route == 'chat' || route == 'knowledge-details' ? null : <p style={{ height: TITLE_HEIGHT }} className='font-bold text-2xl bg-gray-100 text-gray-700 text-center h-10'>{titles[pathname]}</p>}
 
       {/* body part */}
       <div className=' h-full overflow-scroll' style={route != 'chat' ? { paddingBottom: TAB_BAR_HEIGHT * 1.6 } : {}}>
