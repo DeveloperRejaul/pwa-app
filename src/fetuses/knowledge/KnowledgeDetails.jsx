@@ -1,5 +1,4 @@
 import React from 'react';
-import arrow from '../../asset/icon/Arrow-2.svg';
 import star from '../../asset/icon/star.svg';
 import mic from '../../asset/icon/mic.svg';
 import playlist from '../../asset/icon/collection-play.svg';
@@ -8,6 +7,9 @@ import Plyr from "plyr-react"
 import "plyr-react/plyr.css"
 import BlogProfile from '../../components/BlogProfile/BlogProfile';
 import RelatedProducts from '../../components/RelatedProducts/RelatedProducts';
+import { Arrow } from '../../asset/icon';
+import { useNavigate } from 'react-router-dom'
+
 const blogProfile = {
     image: 'https://images.nationalgeographic.org/image/upload/t_edhub_resource_key_image/v1638892233/EducationHub/photos/crops-growing-in-thailand.jpg',
     name: 'John Smith',
@@ -52,6 +54,9 @@ const relatedProduct = [
     },
 ]
 const KnowledgeDetails = () => {
+
+    const navigate = useNavigate()
+
     const plyrProps = {
         type: "vidoe",
         source: {
@@ -67,7 +72,7 @@ const KnowledgeDetails = () => {
             <div className="h-[30vh] w-full relative">
                 <img className='h-full w-full' src={'https://images.nationalgeographic.org/image/upload/t_edhub_resource_key_image/v1638892233/EducationHub/photos/crops-growing-in-thailand.jpg'} alt="" />
                 <div className="absolute top-10 px-4">
-                    <img src={arrow} alt="" />
+                    <Arrow className='cursor-pointer ' onClick={() => navigate("..", { relative: "path" })} />
                 </div>
             </div>
             <div className="p-5">

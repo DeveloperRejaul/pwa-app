@@ -5,7 +5,7 @@ const uri = "https://images.pexels.com/photos/96715/pexels-photo-96715.jpeg?auto
 const data = new Array(100).fill(0).map((_, i) => i)
 import { useNavigate, useLocation } from "react-router-dom"
 import { NAV_PATH } from '../../constant/nav';
-function Carrot() {
+function SunItem() {
     const location = useLocation()
     const navigate = useNavigate();
     return (
@@ -36,7 +36,7 @@ function Carrot() {
     )
 }
 
-export default Carrot
+export default SunItem
 
 
 function Container({ children }) {

@@ -36,10 +36,12 @@ export default Knowledge
 
 function Container({ children }) {
   return (
-    <div className='mx-2'>
-      <div className='space-y-4'>
+    <div className='mx-2 h-screen overflow-hidden'>
+      <div className='space-y-4 h-screen overflow-hidden'>
         <Input />
-        {children}
+        <div className='h-[90vh] overflow-y-scroll px-2 space-y-2 pb-40' >
+          {children}
+        </div>
       </div>
     </div>
   )
