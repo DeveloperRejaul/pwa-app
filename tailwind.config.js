@@ -29,7 +29,7 @@ module.exports = {
         electrolize: ['Electrolize', 'sans-serif'],
         kalam: ['Kalam', 'sans-serif'],
       },
-    }
+    },
   },
   plugins: [],
 }

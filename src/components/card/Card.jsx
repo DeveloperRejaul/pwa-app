@@ -1,43 +1,46 @@
 import React from 'react'
 import Button from '../button/Button'
 
-function Card() {
-  return (
-    <div className='w-[330px] h-[190px] border-2 border-gray-300 rounded-md p-2 flex flex-col justify-between'>
-        
-        {/* Header Part */}
-        <div className='flex space-x-4 items-center'>
-            <div className='bg-gray-500 w-[44px] h-[44px] rounded-2xl' />
-            <p className='font-bold text-xl text-gray-800'>User Name</p>
-        </div>
+function Card({ selectItem, onClick }) {
+    return (
+        <div className='w-[330px] h-[190px] border border-paragraph/20 rounded-md p-2 flex flex-col justify-between'>
 
-        {/* details part */}
-        <div className='flex justify-between'>
-            <div>
-                <p className='text-gray-400 text-sm'>Date Created</p>
-                <p className='font-bold text-gray-700 text-sm'>Thu 1/7/2023</p>
+            {/* Header Part */}
+            <div className='flex  justify-between '>
+                <div className='flex space-x-4 items-center'>
+                    <div className='bg-paragraph w-[44px] h-[44px] rounded-2xl' />
+                    <p className='font-bold text-xl text-headline'>User Name</p>
+                </div>
+                {selectItem ? <span className='font-poppins text-headline font-medium'>{selectItem}</span> : <div />}
             </div>
-            <div>
-                <p className='text-gray-400 text-sm'>Time</p>
-                <p className='font-bold text-gray-700 text-sm'>6:00 pm</p>
-            </div>
-            <div>
-                <p className='text-gray-400 text-sm'>Request Id</p>
-                <p className='font-bold text-gray-700 text-sm'>#REQ-001231255</p>
-            </div>
-        </div>
 
-        {/* Bottom Part */}
-        <div className='flex justify-between items-center'>
-            <div>
-                <p className='text-gray-500 text-sm '>Problem aria</p>
-                <p className='text-gray-900 font-bold text-xl'>Leaf</p>
+            {/* details part */}
+            <div className='flex justify-between'>
+                <div>
+                    <p className='text-paragraph text-sm'>Date Created</p>
+                    <p className='font-bold text-headline text-sm'>Thu 1/7/2023</p>
+                </div>
+                <div>
+                    <p className='text-paragraph text-sm'>Time</p>
+                    <p className='font-bold text-headline text-sm'>6:00 pm</p>
+                </div>
+                <div>
+                    <p className='text-paragraph text-sm'>Request Id</p>
+                    <p className='font-bold text-headline text-sm'>#REQ-001231255</p>
+                </div>
             </div>
-            <Button text={"Open"}/>
-        </div>
 
-    </div>
-  )
+            {/* Bottom Part */}
+            <div className='flex justify-between items-center'>
+                <div>
+                    <p className='text-paragraph text-sm '>Problem aria</p>
+                    <p className='text-headline font-bold text-xl'>Leaf</p>
+                </div>
+                <Button text={"Open"} onClick={onClick} />
+            </div>
+
+        </div>
+    )
 }
 
 export default Card
