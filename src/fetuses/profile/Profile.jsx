@@ -4,13 +4,13 @@ const uri = "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=
 function Profile() {
   return (
     <div className='mx-3 space-y-2'>
-      <div className='flex flex-row items-center space-x-3 px-2 border-2 py-2 border-paragraph/50 rounded-lg'>
+      <div className='flex flex-row items-center space-x-3 px-2 border py-2 border-border rounded-lg'>
         <div className='h-12 w-12 rounded-full overflow-hidden'>
           <img src={uri} alt="profile" />
         </div>
         <p className='text-headline font-bold text-lg'>Karna</p>
       </div>
-      <div className=' border-2 border-paragraph/50 rounded-lg p-2 pb-6 pt-4 space-y-4'>
+      <div className=' border border-border rounded-lg p-2 pb-6 pt-4 space-y-4'>
         <div>
           <p className='text-headline font-bold text-lg'>Address</p>
           <p className='text-paragraph text-lg '>Lorem Ipsum dolor sat, Lorem Ipsum dolor sat, 098765</p>

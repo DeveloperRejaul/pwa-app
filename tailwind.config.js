@@ -30,15 +30,6 @@ module.exports = {
         kalam: ['Kalam', 'sans-serif'],
       },
     },
-    colors:{
-      primary:"#C89963",
-      secondary:"#FFECD6",
-      headline:"#2C4364",
-      paragraph:"#939393",
-      white:"#fff",
-      black:"#000"
-    }
-
   },
   plugins: [],
 }
