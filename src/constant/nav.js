@@ -6,5 +6,6 @@ export const NAV_PATH = {
     KNOWLEDGE: '/knowledge',
     CARROT: '/knowledge/carrot',
     CHAT: '/chat',
+    KNOWLEDGE_DETAILS:'/knowledge-details',
     FARMER_PROFILE: "/farmer-profile"
 }
