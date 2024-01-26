@@ -10,10 +10,9 @@ function Knowledge() {
   const navigate = useNavigate();
 
   return (
-    <div className='mx-2'>
-      <div className='space-y-4'>
-        <Input />
-        {data.map((d, i) => (
+    <Container>
+      {
+        data.map((d, i) => (
           <div key={i} className='p-1 px-2 border-2 border-paragraph/25 rounded-md flex justify-between items-center space-x-6'>
             <div className='h-[50px] w-[70px] rounded-md bg-[#FFECD6] overflow-hidden'>
               <img src={d.uri} alt="logo" className='h-full w-full' />
@@ -24,10 +23,24 @@ function Knowledge() {
             </div>
             <ArrowForward onClick={() => navigate(NAV_PATH.CARROT, { state: { name: d.name, img: d.uri } })} className='fill-primary text-6xl cursor-pointer' />
           </div>
-        ))}
-      </div>
-    </div>
+        ))
+      }
+    </Container>
+
   )
 }
 
 export default Knowledge
+
+
+
+function Container({ children }) {
+  return (
+    <div className='mx-2'>
+      <div className='space-y-4'>
+        <Input />
+        {children}
+      </div>
+    </div>
+  )
+}
