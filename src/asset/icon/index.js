@@ -7,5 +7,6 @@ import {ReactComponent as  ArrowForward} from './arrowForward.svg'
 import {ReactComponent as  ArrowBottom} from './ArrowBottom.svg'
 import {ReactComponent as  Search} from './search.svg'
 import {ReactComponent as Filter} from './filter.svg'
+import {ReactComponent as Arrow} from './Arrow-2.svg'
 
-export {Filter,Search, ArrowBottom,HomeIcon,ProfileIcon,AssignedIcon,NewAssignedIcon,KnowledgeIcon,ArrowForward}
+export {Arrow,Filter,Search, ArrowBottom,HomeIcon,ProfileIcon,AssignedIcon,NewAssignedIcon,KnowledgeIcon,ArrowForward}

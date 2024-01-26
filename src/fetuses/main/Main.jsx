@@ -21,14 +21,14 @@ function Main() {
   return (
     <div className='h-screen overflow-hidden'>
       {/* header part */}
-      {route == 'chat' || route == 'knowledge-details' ? null : <p style={{ height: TITLE_HEIGHT }} className='font-bold text-2xl bg-gray-100 text-gray-700 text-center h-10'>{titles[pathname]}</p>}
+      <p style={{ height: TITLE_HEIGHT }} className='font-bold text-2xl bg-gray-100 text-gray-700 text-center h-10'>{titles[pathname]}</p>
 
       {/* body part */}
       <div className=' h-full overflow-scroll' style={route != 'chat' ? { paddingBottom: TAB_BAR_HEIGHT * 1.6 } : {}}>
         <Outlet />
       </div>
       {/* tab bar part */}
-      {route != 'chat' && <div style={{ height: TAB_BAR_HEIGHT }} className='h-16 flex justify-between bg-white fixed bottom-0 w-screen px-3'>
+      <div style={{ height: TAB_BAR_HEIGHT }} className='h-16 flex justify-between bg-white fixed bottom-0 w-screen px-3'>
         <NavLink to={HOME} className={({ isActive }) => `flex flex-col justify-center items-center  ${isActive ? "stroke-primary text-primary" : "stroke-gray text-gray"}`}>
           <HomeIcon className='size-7 cursor-pointer' />
           <span className='text-sm font-manrope'>Home</span>
@@ -49,7 +49,7 @@ function Main() {
           <ProfileIcon className='size-7 cursor-pointer' />
           <span className='text-sm font-manrope'>Profile</span>
         </NavLink>
-      </div>}
+      </div>
     </div>
   )
 }
