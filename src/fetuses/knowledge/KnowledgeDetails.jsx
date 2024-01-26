@@ -9,7 +9,7 @@ import "plyr-react/plyr.css"
 import BlogProfile from '../../components/BlogProfile/BlogProfile';
 import RelatedProducts from '../../components/RelatedProducts/RelatedProducts';
 const blogProfile = {
-    image: 'https://source.unsplash.com/random',
+    image: 'https://images.nationalgeographic.org/image/upload/t_edhub_resource_key_image/v1638892233/EducationHub/photos/crops-growing-in-thailand.jpg',
     name: 'John Smith',
     designation: 'Professor of M.Sc. Crop Engineering',
     about: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco'
@@ -17,35 +17,35 @@ const blogProfile = {
 const relatedProduct = [
     {
         id: 1,
-        image: 'https://source.unsplash.com/random',
+        image: 'https://images.nationalgeographic.org/image/upload/t_edhub_resource_key_image/v1638892233/EducationHub/photos/crops-growing-in-thailand.jpg',
         title: 'Khodal Iron Earth 100 Psi Motor',
         price: 450,
         category: 'Category'
     },
     {
         id: 2,
-        image: 'https://source.unsplash.com/random',
+        image: 'https://images.nationalgeographic.org/image/upload/t_edhub_resource_key_image/v1638892233/EducationHub/photos/crops-growing-in-thailand.jpg',
         title: 'Khodal Iron Earth 100 Psi Motor',
         price: 450,
         category: 'Category'
     },
     {
         id: 3,
-        image: 'https://source.unsplash.com/random',
+        image: 'https://images.nationalgeographic.org/image/upload/t_edhub_resource_key_image/v1638892233/EducationHub/photos/crops-growing-in-thailand.jpg',
         title: 'Khodal Iron Earth 100 Psi Motor',
         price: 450,
         category: 'Category'
     },
     {
         id: 2,
-        image: 'https://source.unsplash.com/random',
+        image: 'https://images.nationalgeographic.org/image/upload/t_edhub_resource_key_image/v1638892233/EducationHub/photos/crops-growing-in-thailand.jpg',
         title: 'Khodal Iron Earth 100 Psi Motor',
         price: 450,
         category: 'Category'
     },
     {
         id: 3,
-        image: 'https://source.unsplash.com/random',
+        image: 'https://images.nationalgeographic.org/image/upload/t_edhub_resource_key_image/v1638892233/EducationHub/photos/crops-growing-in-thailand.jpg',
         title: 'Khodal Iron Earth 100 Psi Motor',
         price: 450,
         category: 'Category'
@@ -63,9 +63,9 @@ const KnowledgeDetails = () => {
         // Direct props for inner video tag (mdn.io/video)
     }
     return (
-        <div className='relative'>
+        <div className='relative overflow-x-hidden'>
             <div className="h-[30vh] w-full relative">
-                <img className='h-full w-full' src={'https://source.unsplash.com/random'} alt="" />
+                <img className='h-full w-full' src={'https://images.nationalgeographic.org/image/upload/t_edhub_resource_key_image/v1638892233/EducationHub/photos/crops-growing-in-thailand.jpg'} alt="" />
                 <div className="absolute top-10 px-4">
                     <img src={arrow} alt="" />
                 </div>
@@ -102,7 +102,7 @@ const KnowledgeDetails = () => {
                 <p className="text-gray font-manrope text-[17px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices lectus in pellentesque elit dui. Urna ultrices tellus varius scelerisque suspendisse pellentesque. Quam vitae vel, feugiat consequat a massa mi. Dolor a integer aliquet orci quam nibh id tortor morbi.</p>
                 <div className="w-full h-52 rounded-xl overflow-hidden my-5">
 
-                    <img className='w-full h-full' src="https://source.unsplash.com/random" alt="" />
+                    <img className='w-full h-full' src="https://images.nationalgeographic.org/image/upload/t_edhub_resource_key_image/v1638892233/EducationHub/photos/crops-growing-in-thailand.jpg" alt="" />
                 </div>
                 <p className="title text-xl font-bold font-manrope text-headline">Quam vitae vel, feugiat consequat a massa mi</p>
                 <p className="text-gray font-manrope text-[17px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices lectus in pellentesque elit dui. Urna ultrices tellus varius scelerisque suspendisse pellentesque. Quam vitae vel, feugiat consequat a massa mi. Dolor a integer aliquet orci quam nibh id tortor morbi.</p>

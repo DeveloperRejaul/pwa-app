@@ -4,8 +4,10 @@ import Input from '../../components/input/Input';
 const uri = "https://images.pexels.com/photos/96715/pexels-photo-96715.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
 const data = new Array(100).fill(0).map((_, i) => i)
 import { useNavigate, useLocation } from "react-router-dom"
+import { NAV_PATH } from '../../constant/nav';
 function Carrot() {
     const location = useLocation()
+    const navigate = useNavigate();
     return (
         <Container>
             <div className='mx-2 overflow-y-scroll h-[80vh] '>
@@ -25,7 +27,7 @@ function Carrot() {
                                 </div>
                                 <p className='text-paragraph'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
                             </div>
-                            <ArrowForward className='fill-primary text-6xl cursor-pointer' />
+                            <ArrowForward className='fill-primary text-6xl cursor-pointer' onClick={() => navigate(NAV_PATH.KNOWLEDGE_DETAILS)} />
                         </div>
                     ))}
                 </div>

@@ -16,7 +16,7 @@ function Knowledge() {
         {data.map((d, i) => (
           <div key={i} className='p-1 px-2 border-2 border-paragraph/25 rounded-md flex justify-between items-center space-x-6'>
             <div className='h-[50px] w-[70px] rounded-md bg-[#FFECD6] overflow-hidden'>
-              <img src={d.uri} alt="logo" />
+              <img src={d.uri} alt="logo" className='h-full w-full' />
             </div>
             <div>
               <p className='text-headline font-semibold'>{d.name}</p>

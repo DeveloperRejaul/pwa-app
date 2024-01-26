@@ -35,10 +35,6 @@ export const router = createBrowserRouter([
                 element: <Knowledge />
             },
             {
-                path: NAV_PATH.KNOWLEDGE_DETAILS,
-                element: <KnowledgeDetails />
-            },
-            {
                 path: NAV_PATH.PROFILE,
                 element: <Profile />
             },
@@ -48,10 +44,6 @@ export const router = createBrowserRouter([
             {
                 path: NAV_PATH.PROFILE,
                 element: <Profile />
-            },
-            {
-                path: NAV_PATH.CHAT,
-                element: <Chat />
             },
         ]
     },
@@ -63,5 +55,13 @@ export const router = createBrowserRouter([
     {
         path: NAV_PATH.FARMER_PROFILE,
         element: <FarmerProfile />
+    },
+    {
+        path: NAV_PATH.KNOWLEDGE_DETAILS,
+        element: <KnowledgeDetails />
+    },
+    {
+        path: NAV_PATH.CHAT,
+        element: <Chat />
     },
 ])
