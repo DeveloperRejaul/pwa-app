@@ -11,5 +11,5 @@ import {ReactComponent as  Search} from './search.svg'
 import {ReactComponent as Filter} from './filter.svg'
 import {ReactComponent as Arrow} from './Arrow-2.svg'
 
-export {Arrow,Filter,Search, ArrowBottom,HomeIcon,ProfileIcon,AssignedIcon,NewAssignedIcon,KnowledgeIcon,ArrowForward,HomeIcon,ProfileIcon,AssignedIcon,NewAssignedIcon,KnowledgeIcon, DownloadedIcon}
+export {Arrow,Filter,Search, ArrowBottom,HomeIcon,ProfileIcon,AssignedIcon,NewAssignedIcon,KnowledgeIcon,ArrowForward,DownloadedIcon}
 
