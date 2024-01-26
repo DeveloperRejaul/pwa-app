@@ -9,6 +9,8 @@ import Profile from "../fetuses/profile/Profile";
 import Chat from "../fetuses/chat/Chat";
 import { NAV_PATH } from "../constant/nav";
 import KnowledgeDetails from "../fetuses/knowledge/KnowledgeDetails";
+import Carrot from "../fetuses/carrot/Carrot";
+import FarmerProfile from "../fetuses/farmerProfile/FarmerProfile";
 
 export const router = createBrowserRouter([
     {
@@ -29,6 +31,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: NAV_PATH.KNOWLEDGE,
+
                 element: <Knowledge />
             },
             {
@@ -40,9 +43,25 @@ export const router = createBrowserRouter([
                 element: <Profile />
             },
             {
+                element: <Knowledge />,
+            },
+            {
+                path: NAV_PATH.PROFILE,
+                element: <Profile />
+            },
+            {
                 path: NAV_PATH.CHAT,
                 element: <Chat />
             },
         ]
-    }
+    },
+    {
+        path: NAV_PATH.CARROT,
+        element: <Carrot />
+    },
+
+    {
+        path: NAV_PATH.FARMER_PROFILE,
+        element: <FarmerProfile />
+    },
 ])
