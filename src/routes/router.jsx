@@ -8,36 +8,48 @@ import Knowledge from "../fetuses/knowledge/Knowledge";
 import Profile from "../fetuses/profile/Profile";
 import Chat from "../fetuses/chat/Chat";
 import { NAV_PATH } from "../constant/nav";
+import Carrot from "../fetuses/carrot/Carrot";
+import FarmerProfile from "../fetuses/farmerProfile/FarmerProfile";
 
 export const router = createBrowserRouter([
     {
-        path:NAV_PATH.HOME,
-        element:<Main/>,
-        children:[
+        path: NAV_PATH.HOME,
+        element: <Main />,
+
+        children: [
             {
-                path:NAV_PATH.HOME,
-                element:<Home/>
+                path: NAV_PATH.HOME,
+                element: <Home />
             },
             {
-                path:NAV_PATH.ASSIGNED,
-                element:<Assigned/>
+                path: NAV_PATH.ASSIGNED,
+                element: <Assigned />
             },
             {
-                path:NAV_PATH.NEW_ASSIGNED,
-                element:<NewAssigned/>
+                path: NAV_PATH.NEW_ASSIGNED,
+                element: <NewAssigned />
             },
             {
-                path:NAV_PATH.KNOWLEDGE,
-                element:<Knowledge/>
+                path: NAV_PATH.KNOWLEDGE,
+                element: <Knowledge />,
             },
             {
-                path:NAV_PATH.PROFILE,
-                element:<Profile/>
+                path: NAV_PATH.PROFILE,
+                element: <Profile />
             },
             {
-                path:NAV_PATH.CHAT,
+                path: NAV_PATH.CHAT,
                 element: <Chat />
             },
         ]
-    }
+    },
+    {
+        path: NAV_PATH.CARROT,
+        element: <Carrot />
+    },
+
+    {
+        path: NAV_PATH.FARMER_PROFILE,
+        element: <FarmerProfile />
+    },
 ])
