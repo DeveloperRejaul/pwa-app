@@ -5,8 +5,10 @@ const BlogProfile = ({ data }) => {
     return (
         <div className=' px-5'>
             <div className="flex items-center gap-5 py-7">
-                <div className="h-14 w-14 rounded-full border border-primary overflow-hidden">
-                    <img className='w-full h-full' src={image} alt="profile" />
+                <div className="border border-primary overflow-hidden rounded-full bg-white">
+                    <div className="h-14 w-14 rounded-full border m-[2px] overflow-hidden">
+                        <img className='w-full h-full' src={image} alt="profile" />
+                    </div>
                 </div>
                 <div className="font-manrope">
                     <p className="text-headline font-semibold text-lg">{name}</p>
