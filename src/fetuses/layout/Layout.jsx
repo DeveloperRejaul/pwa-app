@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink, Outlet } from 'react-router-dom'
-import { HomeIcon, Logo } from '../../../asset/icon'
+import { HomeIcon, Logo } from '../../asset/icon'
 
 const Menu = [
     { name: "Home", path: "/" },

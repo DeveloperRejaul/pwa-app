@@ -3,7 +3,7 @@ import { NavLink, Outlet } from 'react-router-dom';
 import { AssignedIcon, HomeIcon, KnowledgeIcon, NewAssignedIcon, ProfileIcon } from '../../asset/icon';
 import { NAV_PATH } from '../../constant/nav';
 import { useLocation } from 'react-router-dom';
-import Layout from '../home/layout/Layout';
+import Layout from '../layout/Layout';
 
 const TITLE_HEIGHT = 50;
 const TAB_BAR_HEIGHT = 70;
