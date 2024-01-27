@@ -14,12 +14,14 @@ function Knowledge() {
       {
         data.map((d, i) => (
           <div key={i} className='p-1 px-2 border-2 border-paragraph/25 rounded-md flex justify-between items-center space-x-6'>
-            <div className='h-[50px] w-[70px] rounded-md bg-[#FFECD6] overflow-hidden'>
-              <img src={d.uri} alt="logo" className='h-full w-full' />
-            </div>
-            <div>
-              <p className='text-headline font-semibold'>{d.name}</p>
-              <p className='text-paragraph'>{d.details}</p>
+            <div className='space-x-3 flex'>
+              <div className='h-[50px] w-[70px] rounded-md bg-[#FFECD6] overflow-hidden'>
+                <img src={d.uri} alt="logo" className='h-full w-full' />
+              </div>
+              <div>
+                <p className='text-headline font-semibold'>{d.name}</p>
+                <p className='text-paragraph'>{d.details}</p>
+              </div>
             </div>
             <ArrowForward onClick={() => navigate(NAV_PATH.CARROT, { state: { name: d.name, img: d.uri } })} className='fill-primary text-6xl cursor-pointer' />
           </div>
