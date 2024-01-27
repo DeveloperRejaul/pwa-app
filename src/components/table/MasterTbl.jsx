@@ -1,32 +1,12 @@
 import React, { useState } from 'react'
 import CheckBox from './components/CheckBox';
+import TblRow from './components/TblRow';
 
-// const TdCheckBox = () => {
-//     const [checkRow, setCheckRow] = useState(false);
-//     const onCheck = () => setCheckRow(!checkRow);
-//     return (
-//             <td className="">
-//                 <div className={`flex justify-center h-full py-[1.813rem] px-3  border-l-[0.438rem] ${checkRow ? 'border-primary' : ' border-transparent'} `}>
-//                     <CheckBox onCheck={onCheck} checked={checkRow} />
-//                 </div>
-//             </td>
-//     )
-// }
-const Td = ({ children, checkBox = false }) => {
-    const [checkRow, setCheckRow] = useState(false);
-    const onCheck = () => setCheckRow(!checkRow);
-    return (
-        checkBox ? (
-            <td className="">
-                <div className={`flex justify-center h-full py-[1.813rem] px-3  border-l-[0.438rem] ${checkRow ? 'border-primary' : ' border-transparent'} `}>
-                    <CheckBox onCheck={onCheck} checked={checkRow} />
-                </div>
-            </td>
-        ) : <td className="px-3">{children}</td>
-    )
-}
-export default function MasterTbl() {
-
+export default function MasterTbl({ tblHeader = [], tblBody = [] }) {
+    // const data = [
+    //     { id: 1, requestId: '#REQ-001231255', username: { icon: '', name: 'Samuel' }, date: 'hu 1/7/2023 5:24 AM', type: 'Ticket', assigned: { icon: '', name: 'Samuel' } }
+    // ]
+    // const {name,id,requestId,username}=data;
     return (
         <table className="bg-[#FCFCFC] font-poppins w-full overflow-auto">
             <thead className="text-base font-normal text-[#A3A3A3] capitalize">
@@ -47,13 +27,14 @@ export default function MasterTbl() {
             <tbody>
                 {[1, 2, 3, 4].map((i) => (
                     <tr key={i} className="text-[#27364E] text-base font-medium leading-6">
-                        <Td checkBox />
-                        <Td>#cewf324324</Td>
-                        <Td>Hasan</Td>
-                        <Td>12/12/1996</Td>
-                        <Td>Action</Td>
-                        <Td>hasan assign</Td>
-                        <Td>....</Td>
+                        {[{}]}
+                        <TblRow checkBox />
+                        <TblRow>#cewf324324</TblRow>
+                        <TblRow>Hasan</TblRow>
+                        <TblRow>12/12/1996</TblRow>
+                        <TblRow>Action</TblRow>
+                        <TblRow>hasan assign</TblRow>
+                        <TblRow>....</TblRow>
                     </tr>
                 ))}
             </tbody>
