@@ -2,14 +2,15 @@ import React from 'react'
 import { NavLink, Outlet } from 'react-router-dom'
 import { HomeIcon, Logo } from '../../asset/icon'
 import Topbar from './Topbar'
+import { NAV_PATH } from '../../constant/nav';
 
 const Menu = [
-    { name: "Home", path: "/" },
+    { name: "Home", path: NAV_PATH.HOME },
     { name: "All Requesy", path: "/allrequest" },
-    { name: "Assigned Requests", path: "/assigned" },
+    { name: "Assigned Requests", path: NAV_PATH.ASSIGNED },
     { name: "Consultations", path: "/consultations" },
-    { name: "Knowledge base", path: "/knowledge" },
-    { name: "Profile", path: "/profile" },
+    { name: "Knowledge base", path: NAV_PATH.KNOWLEDGE },
+    { name: "Profile", path: NAV_PATH.PROFILE },
 ]
 export default function Layout() {
     return (
