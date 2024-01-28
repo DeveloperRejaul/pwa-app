@@ -6,7 +6,7 @@ import { NAV_PATH } from '../../constant/nav';
 
 const Menu = [
     { name: "Home", path: NAV_PATH.HOME },
-    { name: "All Requesy", path: "/allrequest" },
+    { name: "All Requesy", path: "/allreq" },
     { name: "Assigned Requests", path: NAV_PATH.ASSIGNED },
     { name: "Consultations", path: "/consultations" },
     { name: "Knowledge base", path: NAV_PATH.KNOWLEDGE },
