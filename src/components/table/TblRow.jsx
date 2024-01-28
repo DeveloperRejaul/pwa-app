@@ -7,7 +7,7 @@ export default function TblRow({ children, checkBox = false, className = "" }) {
     return (
         checkBox ? (
             <td>
-                <div className={`${className} flex justify-center h-full py-[1.813rem]  border-l-[0.438rem] ${checkRow ? 'border-primary' : ' border-transparent'} `}>
+                <div className={`flex justify-center h-full py-[1.813rem]  border-l-[0.438rem] ${checkRow ? 'border-primary' : ' border-transparent'} ${className}`}>
                     <CheckBox onCheck={onCheck} checked={checkRow} />
                 </div>
             </td>

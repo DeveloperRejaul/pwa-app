@@ -1,6 +1,7 @@
 import React from 'react'
 import { NavLink, Outlet } from 'react-router-dom'
 import { HomeIcon, Logo } from '../../asset/icon'
+import Topbar from './Topbar'
 
 const Menu = [
     { name: "Home", path: "/" },
@@ -12,8 +13,8 @@ const Menu = [
 ]
 export default function Layout() {
     return (
-        <div className="flex">
-            <div className="py-[1.98rem] bg-secondary h-screen w-[22.375rem] space-y-16 px-7 overflow-y-auto">
+        <div className="flex p-4 h-screen">
+            <div className="py-[1.98rem] bg-secondary h-[95vh] w-[22.375rem] space-y-16 px-7 overflow-y-auto rounded-lg">
                 <div className="flex items-center justify-between">
                     <div className="flex items-center before:space-x-2">
                         <Logo className="w-16 h-11" />
@@ -37,9 +38,9 @@ export default function Layout() {
                     ))}
                 </div>
             </div>
-            <div className="w-full">
-                {/* <Topbar onClick={viewSidebar} /> */}
-                <div className="max-h-screen overflow-auto">
+            <div className="w-full px-14 h-[95vh] ">
+                <Topbar />
+                <div className="pb-5 h-[91.5vh] overflow-auto no-scrollbar">
                     <Outlet />
                 </div>
             </div>

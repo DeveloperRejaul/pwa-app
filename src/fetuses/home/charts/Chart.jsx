@@ -9,7 +9,7 @@ export default function Chart() {
         }],
         options: {
             chart: {
-                height: 350,
+                // height: 350,
                 type: 'area',
                 background: 'transparent',
                 toolbar: {
@@ -57,13 +57,11 @@ export default function Chart() {
     }
 
     return (
-        <div>
-            <ReactApexChart
-                options={options.options}
-                series={options.series}
-                type="area"
-                height={350}
-            />
-        </div>
+        <ReactApexChart
+            options={options.options}
+            series={options.series}
+            type="area"
+        // height={350}
+        />
     )
 }

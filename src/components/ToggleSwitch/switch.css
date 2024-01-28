@@ -1,0 +1,46 @@
+.slider:before {
+    position: absolute;
+    content: "Inactive";
+    height: full;
+    width: 60%;
+    /* border-radius: 50%; */
+    left: 0px;
+    bottom: 0px;
+    top: 0px;
+    padding-top: 14px;
+    background-color: #8B8B8B;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider::before {
+    content: "Active";
+    background-color: #39AA35;
+}
+
+/* input:checked+.slider {
+    background-color: #ccc;
+} */
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    /* -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px); */
+
+    transform: translateX(4rem);
+    /* background-image: url("../../assets//Icons/light.svg"); */
+    background-repeat: no-repeat;
+    background-position: 4.6px;
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    /* border-radius: 50%; */
+}
