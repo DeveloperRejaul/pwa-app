@@ -1,12 +1,9 @@
 import React, { useState } from 'react'
-import CheckBox from './components/CheckBox';
-import TblRow from './components/TblRow';
+import CheckBox from '../checkBox/CheckBox';
+import TblRow from './TblRow';
 
-export default function MasterTbl({ tblHeader = [], tblBody = [] }) {
-    // const data = [
-    //     { id: 1, requestId: '#REQ-001231255', username: { icon: '', name: 'Samuel' }, date: 'hu 1/7/2023 5:24 AM', type: 'Ticket', assigned: { icon: '', name: 'Samuel' } }
-    // ]
-    // const {name,id,requestId,username}=data;
+export default function MasterTbl() {
+
     return (
         <table className="bg-[#FCFCFC] font-poppins w-full overflow-auto">
             <thead className="text-base font-normal text-[#A3A3A3] capitalize">
@@ -27,7 +24,6 @@ export default function MasterTbl({ tblHeader = [], tblBody = [] }) {
             <tbody>
                 {[1, 2, 3, 4].map((i) => (
                     <tr key={i} className="text-[#27364E] text-base font-medium leading-6">
-                        {[{}]}
                         <TblRow checkBox />
                         <TblRow>#cewf324324</TblRow>
                         <TblRow>Hasan</TblRow>

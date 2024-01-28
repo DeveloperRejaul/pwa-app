@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import CheckBox from './CheckBox';
+import CheckBox from '../checkBox/CheckBox';
 
 export default function TblRow({ children, checkBox = false, className = "" }) {
     const [checkRow, setCheckRow] = useState(false);
