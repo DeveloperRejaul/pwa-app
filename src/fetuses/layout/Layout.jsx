@@ -44,14 +44,12 @@ export default function Layout() {
                 </div>
                 <NavLink className="flex font-medium text-base"
                     to="/">
-                    {({ isActive }) => (
-                        <div className={`${isActive ? 'w-full ' : ''} flex transition-all py-4 duration-200 rounded-xl px-4`}>
-                            <div className="flex items-center ">
-                                <Logout className={`${isActive ? 'fill-white' : 'fill-[#B9BBBD]'} w-14 h-14`} />
-                                <p className="whitespace-nowrap">Logout</p>
-                            </div>
+                    <div className="flex transition-all py-4 duration-200 rounded-xl px-4">
+                        <div className="flex items-center space-x-4">
+                            <Logout className="w-7 h-7 fill-gray opacity-60" />
+                            <p className="whitespace-nowrap">Logout</p>
                         </div>
-                    )}
+                    </div>
                 </NavLink>
             </div>
 

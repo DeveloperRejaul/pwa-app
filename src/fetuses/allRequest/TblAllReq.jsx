@@ -1,14 +1,22 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import CheckBox from '../../components/checkBox/CheckBox'
 import TblRow from '../../components/table/TblRow'
 import fakeData from '../../db/AllRequest.json';
 import Button from '../../components/button/Button';
 import { ArrowRight } from '../../asset/icon';
+import ModalAssign from './ModalAssign';
 
 const TblHeader = ["Request Id", "User Name", "Date Created", "Request Type", "Assigned"];
 
 export default function TblAllReq() {
-    const [fetchData, setFetchData] = useState(fakeData)
+    const [showAssign, setShowAssign] = useState(null);
+    const [fetchData, setFetchData] = useState(fakeData);
+    const refAssing = useRef();
+
+    const setShowModal = (id) => {
+        setShowAssign((prev) => prev === id ? null : id);
+    }
+
     return (
         <table className="bg-[#FCFCFC] font-poppins w-full overflow-auto">
             <thead className="text-base font-normal text-[#A3A3A3] capitalize">
@@ -38,7 +46,12 @@ export default function TblAllReq() {
                         <TblRow>{new Date(d.created).toLocaleDateString()}</TblRow>
                         <TblRow>{d.requestType}</TblRow>
                         <TblRow>
-                            <button type="button" className="h-[3.25rem] w-36 text-secondary bg-primary rounded-xl">Assign To Me</button>
+                            <div className="relative">
+                                <button type="button" className="h-[3.25rem] w-36 text-secondary bg-primary rounded-xl" onClick={() => setShowModal(d.id)}>Assign To Me</button>
+                                {/* Modal */}
+                                {showAssign === d.id ? <ModalAssign /> : ''}
+
+                            </div>
                         </TblRow>
                         <TblRow>
                             <ArrowRight onClick={() => { }} />
