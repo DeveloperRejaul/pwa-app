@@ -31,7 +31,7 @@ export default function ProfileDsk() {
                         </Modal>)}
                     </div>
                 </div>
-                <div>
+                <div className="space-y-4">
                     <table>
                         <tbody>
                             <tr className="">

@@ -4,9 +4,12 @@ import fetchData from '../../db/AllRequest.json';
 import TblRow from '../../components/table/TblRow';
 import Switch from '../../components/ToggleSwitch/Switch';
 import { ArrowRight } from '../../asset/icon';
+import { useNavigate } from 'react-router-dom';
+import { NAV_PATH } from '../../constant/nav';
 
 const TblHeader = ["User Id", "Advisor Name", "Date Joined", "Mobile Number", "Status"]
 export default function TblAdvisor() {
+    const navigate = useNavigate();
     return (
         <table className="bg-[#FCFCFC] font-poppins w-full overflow-auto">
             <thead className="text-base font-normal text-[#A3A3A3] capitalize">
@@ -39,7 +42,7 @@ export default function TblAdvisor() {
                             <Switch checked={d?.status || false} />
                         </TblRow>
                         <TblRow>
-                            <ArrowRight onClick={() => { }} />
+                            <ArrowRight onClick={() => navigate('/profile-details')} className="cursor-pointer" />
                         </TblRow>
                     </tr>
                 ))}

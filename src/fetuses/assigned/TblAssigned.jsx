@@ -3,10 +3,12 @@ import CheckBox from '../../components/checkBox/CheckBox'
 import fakeData from '../../db/AllRequest.json';
 import TblRow from '../../components/table/TblRow';
 import { ArrowRight, Check } from '../../asset/icon';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 const TblHeader = ["Request Id", "User Name", "Date Created", "Request Type", "Status"];
 
 export default function TblAssigned() {
+    const navigate = useNavigate();
     const [fetchData, setFetchData] = useState(fakeData)
     return (
         <table className="bg-[#FCFCFC] font-poppins w-full overflow-auto">
@@ -43,7 +45,7 @@ export default function TblAssigned() {
                             </button>
                         </TblRow>
                         <TblRow>
-                            <ArrowRight onClick={() => { }} />
+                            <ArrowRight onClick={() => navigate('/chat')} className="cursor-pointer" />
                         </TblRow>
                     </tr>
                 ))}

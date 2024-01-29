@@ -57,7 +57,7 @@ const Chat = () => {
         })
     }, [chats]);
     return (
-        <div className='px-5 h-screen relative w-full flex flex-col justify-between'>
+        <div className='px-5 py-11 h-screen relative w-full flex flex-col justify-between'>
             <Header data={{ name: ' Plot Name - Advisory', status: 'Online', image: profile }} />
             <div className="space-y-7 overflow-y-auto w-full px-2 h-full   no-scrollbar">
                 <div className='bg-[#C8996333] w-[5.44rem] mx-auto rounded-full p-[6px] text-center text-headline text-[8px]'>

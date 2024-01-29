@@ -13,6 +13,7 @@ import FarmerProfile from "../fetuses/farmerProfile/FarmerProfile";
 import SunItem from "../fetuses/knowledge/subitem";
 import AllRequest from "../fetuses/allRequest/AllRequest";
 import AdvisorUser from "../fetuses/advisorUser/AdvisorUser";
+import Consultations from "../fetuses/consultations/Consultations";
 
 export const router = createBrowserRouter([
     {
@@ -41,7 +42,6 @@ export const router = createBrowserRouter([
             },
             {
                 path: NAV_PATH.KNOWLEDGE,
-
                 element: <Knowledge />
             },
             {
@@ -49,11 +49,20 @@ export const router = createBrowserRouter([
                 element: <Profile />
             },
             {
-                element: <Knowledge />,
+                path: NAV_PATH.CONSULTATIONS,
+                element: <Consultations />,
+            },
+            {
+                path: NAV_PATH.PROFILE_DETAILS,
+                element: <Profile />
             },
             {
                 path: NAV_PATH.PROFILE,
                 element: <Profile />
+            },
+            {
+                path: NAV_PATH.CHAT,
+                element: <Chat />
             },
         ]
     },
@@ -70,8 +79,8 @@ export const router = createBrowserRouter([
         path: NAV_PATH.KNOWLEDGE_DETAILS,
         element: <KnowledgeDetails />
     },
-    {
-        path: NAV_PATH.CHAT,
-        element: <Chat />
-    },
+    // {
+    //     path: NAV_PATH.CHAT,
+    //     element: <Chat />
+    // },
 ])
