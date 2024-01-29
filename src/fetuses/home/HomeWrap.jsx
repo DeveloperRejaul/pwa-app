@@ -5,7 +5,7 @@ import ChartWrap from './charts/ChartWrap';
 
 export default function HomeWrap() {
     return (
-        <div className="py-20 w-full">
+        <div className="hidden xl:block py-20 w-full">
             <div className="grid grid-cols-6 gap-8">
                 <div className="col-span-4 space-y-8">
                     <div className="flex space-x-7">

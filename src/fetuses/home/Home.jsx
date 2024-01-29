@@ -10,15 +10,17 @@ function Home() {
   const navigate = useNavigate()
 
   return (
-    <HomeWrap />
-    // <div className='flex flex-col items-center'>
-    //   {db.data.map((d, i) => (
-    //     <div key={i}>
-    //       <p className='font-bold text-xl text-gray-800 mt-5 mb-2'>{d.title}</p>
-    //       <div className='space-y-3'> {d.items.map((item, i) => <Card onClick={() => navigate(NAV_PATH.FARMER_PROFILE)} key={i} />)}</div>
-    //     </div>
-    //   ))}
-    // </div>
+    <>
+      <HomeWrap />
+      <div className='xl:hidden flex flex-col items-center'>
+        {db.data.map((d, i) => (
+          <div key={i}>
+            <p className='font-bold text-xl text-gray-800 mt-5 mb-2'>{d.title}</p>
+            <div className='space-y-3'> {d.items.map((item, i) => <Card onClick={() => navigate(NAV_PATH.FARMER_PROFILE)} key={i} />)}</div>
+          </div>
+        ))}
+      </div>
+    </>
   )
 }
 
