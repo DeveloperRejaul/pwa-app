@@ -12,6 +12,7 @@ import KnowledgeDetails from "../fetuses/knowledge/KnowledgeDetails";
 import FarmerProfile from "../fetuses/farmerProfile/FarmerProfile";
 import SunItem from "../fetuses/knowledge/subitem";
 import AllRequest from "../fetuses/allRequest/AllRequest";
+import AdvisorUser from "../fetuses/advisorUser/AdvisorUser";
 
 export const router = createBrowserRouter([
     {
@@ -29,6 +30,10 @@ export const router = createBrowserRouter([
             {
                 path: NAV_PATH.ASSIGNED,
                 element: <Assigned />
+            },
+            {
+                path: NAV_PATH.ADVISORY,
+                element: <AdvisorUser />
             },
             {
                 path: NAV_PATH.NEW_ASSIGNED,

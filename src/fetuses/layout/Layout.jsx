@@ -6,10 +6,11 @@ import { NAV_PATH } from '../../constant/nav';
 
 const Menu = [
     { name: "Home", path: NAV_PATH.HOME },
-    { name: "All Requesy", path: "/allreq" },
+    { name: "All Requesy", path: NAV_PATH.ALLREQ },
     { name: "Assigned Requests", path: NAV_PATH.ASSIGNED },
     { name: "Consultations", path: "/consultations" },
     { name: "Knowledge base", path: NAV_PATH.KNOWLEDGE },
+    { name: "Advisor User", path: NAV_PATH.ADVISORY },
     { name: "Profile", path: NAV_PATH.PROFILE },
 ]
 export default function Layout() {

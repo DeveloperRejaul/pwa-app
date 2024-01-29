@@ -2,6 +2,7 @@ export const NAV_PATH = {
     HOME: '/',
     PROFILE: '/profile',
     ASSIGNED: '/assigned',
+    ADVISORY: '/advisor',
     ALLREQ: '/allreq',
     NEW_ASSIGNED: '/new-assigned',
     KNOWLEDGE: '/knowledge',
