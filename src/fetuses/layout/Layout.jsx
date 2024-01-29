@@ -6,7 +6,7 @@ import { NAV_PATH } from '../../constant/nav';
 
 const Menu = [
     { name: "Home", path: NAV_PATH.HOME },
-    { name: "All Requesy", path: NAV_PATH.ALLREQ },
+    { name: "All Request", path: NAV_PATH.ALLREQ },
     { name: "Assigned Requests", path: NAV_PATH.ASSIGNED },
     { name: "Consultations", path: "/consultations" },
     { name: "Knowledge base", path: NAV_PATH.KNOWLEDGE },
@@ -16,7 +16,7 @@ const Menu = [
 export default function Layout() {
     return (
         <div className="flex p-4 h-screen">
-            <div className="py-[1.98rem] bg-secondary h-[95vh] w-[22.375rem] space-y-16 px-7 overflow-y-auto rounded-lg">
+            <div className="py-[1.98rem] bg-gray/10 h-[95vh] w-[22.375rem] space-y-16 px-7 overflow-y-auto rounded-lg">
                 <div className="flex items-center justify-between">
                     <div className="flex items-center before:space-x-2">
                         <Logo className="w-16 h-11" />
