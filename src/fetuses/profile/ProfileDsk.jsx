@@ -13,7 +13,6 @@ export default function ProfileDsk() {
                     <div className="pt-10 space-y-3 flex flex-col items-center">
                         <p className="text-2xl font-medium ">Advisor Lorem Name</p>
                         <Button className="h-16" text="Edit Data" />
-                        <button onClick={() => setShow(!show)}>click</button>
                         {show && (<Modal setState={setShow}>
                             <div className="pt-11 px-11 space-y-2">
                                 <h2 className=" text-2xl font-bold text-gray">Change Your Password</h2>
@@ -27,7 +26,7 @@ export default function ProfileDsk() {
                                 <input type="text" placeholder="Confirm New Password" className="py-2 w-full outline-none border-b border-gray border-opacity-50" />
                             </div>
                             <div className="px-11 pb-5">
-                                <Button text="Update Password" className="h-16 w-full" />
+                                <Button text="Update Password" className="h-16 w-full" onClick={() => setShow(true)} />
                             </div>
                         </Modal>)}
                     </div>

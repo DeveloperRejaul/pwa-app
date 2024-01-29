@@ -3,7 +3,11 @@ import React, { useRef } from 'react'
 export default function Modal({ children, setState = () => { } }) {
     const refModal = useRef();
 
-    const onClose = () => setState(false);
+    const onClose = (e) => {
+        if (refModal?.current?.contains && !refModal.current.contains(e.target)) {
+            setState(false);
+        }
+    }
     return (
         <div className="relative z-10">
             <div
