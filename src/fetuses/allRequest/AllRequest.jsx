@@ -8,9 +8,9 @@ export default function AllRequest() {
             <div className="flex justify-between items-center pb-4">
                 <div className="space-y-2">
                     <h2 className="text-2xl font-medium leading-9">All Request</h2>
-                    <p className="text-sm font-normal text-gray">um fuga consequuntur ut et.</p>
+                    <p className="text-sm font-normal text-gray">Mum fuga consequuntur ut et.</p>
                 </div>
-                <div className="flex items-center space-x-3">
+                <div className="flex items-center space-x-3 bg-primary/10 cursor-pointer rounded-xl p-4">
                     <p>Recent</p>
                     <ArrowBottom />
                 </div>

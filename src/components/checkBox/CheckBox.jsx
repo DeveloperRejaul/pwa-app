@@ -4,6 +4,7 @@ export default function CheckBox({ onCheck = () => { }, checked = false }) {
     return (
         <input
             className="
+            relative
             h-6
             w-6 
             appearance-none 
