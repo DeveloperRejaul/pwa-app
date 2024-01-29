@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useRef } from 'react'
 
-export default function Modal({ children, onClose, crtProjRef }) {
+export default function Modal({ children, setState = () => { } }) {
+    const refModal = useRef();
+
+    const onClose = () => setState(false);
     return (
         <div className="relative z-10">
             <div
                 className="fixed inset-0 bg-opacity-40 transition-opacity bg-gray"
             />
-
             <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
                 <div
                     className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0"
@@ -14,7 +16,7 @@ export default function Modal({ children, onClose, crtProjRef }) {
                     role="contentinfo"
                     onKeyDown={() => { }}
                 >
-                    <div ref={crtProjRef} className="relative transform rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
+                    <div ref={refModal} className="relative transform rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
                         {children}
                     </div>
                 </div>
