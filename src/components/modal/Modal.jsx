@@ -7,6 +7,7 @@ export default function Modal({ children, setState = () => { } }) {
         if (refModal?.current?.contains && !refModal.current.contains(e.target)) {
             setState(false);
         }
+        console.log("hit");
     }
     return (
         <div className="relative z-10">

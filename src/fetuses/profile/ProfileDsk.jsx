@@ -52,7 +52,7 @@ export default function ProfileDsk() {
                             </tr>
                         </tbody>
                     </table>
-                    <Button className="h-16 w-72" text="Change Password" />
+                    <Button className="h-16 w-72" text="Change Password" onClick={() => setShow(true)} />
                 </div>
             </div>
         </div>
