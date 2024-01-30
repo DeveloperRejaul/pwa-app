@@ -2,6 +2,8 @@ import React from 'react'
 import Card from './card/Card'
 import ChatList from './chat_open/ChatList'
 import ChartWrap from './charts/ChartWrap';
+import Calender from '../../components/calender/Calender';
+import fetchData from '../../db/AllRequest.json';
 
 export default function HomeWrap() {
     return (
@@ -17,8 +19,9 @@ export default function HomeWrap() {
                         <ChartWrap />
                     </div>
                 </div>
-                <div className="col-span-2">
+                <div className="col-span-2 space-y-20">
                     <ChatList />
+                    <Calender apiData={fetchData} />
                 </div>
             </div>
         </div>

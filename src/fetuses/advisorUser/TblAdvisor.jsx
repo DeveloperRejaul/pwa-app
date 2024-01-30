@@ -5,7 +5,6 @@ import TblRow from '../../components/table/TblRow';
 import Switch from '../../components/ToggleSwitch/Switch';
 import { ArrowRight } from '../../asset/icon';
 import { useNavigate } from 'react-router-dom';
-import { NAV_PATH } from '../../constant/nav';
 
 const TblHeader = ["User Id", "Advisor Name", "Date Joined", "Mobile Number", "Status"]
 export default function TblAdvisor() {
