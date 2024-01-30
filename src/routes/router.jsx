@@ -64,21 +64,33 @@ export const router = createBrowserRouter([
                 path: NAV_PATH.CHAT,
                 element: <Chat />
             },
+            {
+                path: NAV_PATH.KNOWLEDGE_DETAILS,
+                element: <KnowledgeDetails />
+            },
+            {
+                path: NAV_PATH.CARROT,
+                element: <SunItem />
+            },
+            {
+                path: NAV_PATH.FARMER_PROFILE,
+                element: <FarmerProfile />
+            },
         ]
     },
-    {
-        path: NAV_PATH.CARROT,
-        element: <SunItem />
-    },
+    // {
+    //     path: NAV_PATH.CARROT,
+    //     element: <SunItem />
+    // },
 
-    {
-        path: NAV_PATH.FARMER_PROFILE,
-        element: <FarmerProfile />
-    },
-    {
-        path: NAV_PATH.KNOWLEDGE_DETAILS,
-        element: <KnowledgeDetails />
-    },
+    // {
+    //     path: NAV_PATH.FARMER_PROFILE,
+    //     element: <FarmerProfile />
+    // },
+    // {
+    //     path: NAV_PATH.KNOWLEDGE_DETAILS,
+    //     element: <KnowledgeDetails />
+    // },
     // {
     //     path: NAV_PATH.CHAT,
     //     element: <Chat />

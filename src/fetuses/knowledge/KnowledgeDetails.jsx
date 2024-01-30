@@ -68,7 +68,7 @@ const KnowledgeDetails = () => {
         // Direct props for inner video tag (mdn.io/video)
     }
     return (
-        <div className='relative overflow-x-hidden'>
+        <div className='relative overflow-x-hidden container mx-auto pt-11'>
             <div className="h-[30vh] w-full relative">
                 <img className='h-full w-full' src={'https://images.nationalgeographic.org/image/upload/t_edhub_resource_key_image/v1638892233/EducationHub/photos/crops-growing-in-thailand.jpg'} alt="" />
                 <div className="absolute top-10 px-4">

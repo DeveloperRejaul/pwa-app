@@ -14,6 +14,7 @@ const Menu = [
     { name: "Profile", path: NAV_PATH.PROFILE, icon: ProfileIcon },
 ]
 export default function Layout() {
+
     return (
         <div className="flex p-4 h-screen">
             <div className="py-[1.98rem] bg-gray/10 h-[95vh] w-[22.375rem] px-7 overflow-y-auto rounded-lg flex flex-col justify-between">
@@ -54,7 +55,7 @@ export default function Layout() {
             </div>
 
             <div className="w-full px-14 h-[95vh] ">
-                <Topbar />
+                <Topbar menu={Menu} />
                 <div className="pb-5 h-[91.5vh] overflow-auto no-scrollbar">
                     <Outlet />
                 </div>

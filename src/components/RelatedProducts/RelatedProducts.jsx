@@ -11,7 +11,7 @@ const RelatedProducts = ({ data = [] }) => {
                 <p className="text-lg text-headline font-semibold ">View Related Products</p>
                 <Link className='text-primary text-sm font-semibold' >View All</Link>
             </div>
-            <div className="flex w-screen overflow-x-scroll gap-3 pr-8 no-scrollbar">
+            <div className="flex overflow-x-scroll gap-3 pr-8 no-scrollbar">
                 {
                     products.map((product, index) => {
                         return <ProductCard product={product} key={index} />
