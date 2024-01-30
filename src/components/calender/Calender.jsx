@@ -61,20 +61,26 @@ export default function Calender({ apiData }) {
     }
   }
   const getDate = (day) => {
-    const dt = apiData.find((d) => new Date(d.created).toDateString() === day)
+    const dt = apiData.find((d) => {
+
+      return new Date(d.created).toDateString() === day;
+    })
+    // console.log({ dt: dt?.created, day });
     if (dt) return true;
     else false;
   }
-  const todayDate = ({ day, date }) => {
-    if (day) {
-      const dayNum = new Date(date).getDay();
-      weekdays[dayNum];
-    }
-    const nowDate = new Date().getDate();
-    const dt = new Date(date).getDate();
-    if (dt === nowDate) return true;
-    return false;
-  }
+  console.log(apiData);
+  // const todayDate = ({ day, date }) => {
+  //   // if (day) {
+  //   //   const dayNum = new Date(date).getDay();
+  //   //   weekdays[dayNum];
+  //   // }
+  //   const nowDate = new Date().getDate();
+  //   const dt = new Date(date).getDate();
+  //   console.log({ nowDate, dt });
+  //   if (dt === nowDate) return true;
+  //   return false;
+  // }
   return (
     <div
       className="border border-primary rounded-lg px-9 py-6 border-opacity-45"
@@ -118,7 +124,7 @@ export default function Calender({ apiData }) {
                         text-center text-md font-semibold cursor-pointer transition-all duration-300 rounded-lg py-2`}
                     >
                       {getDate(new Date(singleDate).toDateString()) ? (
-                        <div className={`h-8 w-8 ${todayDate({ date: singleDate }) ? '' : 'bg-opacity-30'} bg-primary rounded-full flex items-center justify-center font-medium text-xs `}>
+                        <div className={`h-8 w-8 ${new Date(singleDate).getDate() === new Date().getDate() ? '' : 'bg-opacity-30'} bg-primary rounded-full flex items-center justify-center font-medium text-xs `}>
                           {new Date(singleDate).getDate()}
                         </div>
                       ) : '.'}
