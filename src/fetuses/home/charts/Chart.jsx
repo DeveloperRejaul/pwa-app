@@ -30,8 +30,8 @@ export default function Chart() {
                 show: false
             },
             xaxis: {
-                type: 'datetime',
-                categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
+                type: 'category',
+                categories: ["May", "Jun", "July", "Aug", "Sep", "Oct", "Nov"]
             },
             fill: {
                 colors: ['#C89963', '#ffffff'],
@@ -48,11 +48,11 @@ export default function Chart() {
             grid: {
                 show: false
             },
-            tooltip: {
-                x: {
-                    format: 'dd/MM/yy HH:mm'
-                },
-            },
+            // tooltip: {
+            //     x: {
+            //         format: 'dd/MM/yy HH:mm'
+            //     },
+            // },
         },
     }
 
