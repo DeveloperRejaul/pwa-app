@@ -32,9 +32,11 @@ export default function Shedule() {
                     <tr>
                         {weekDt?.map((d, i) => (
                             <td key={i}>
-                                <div className={`${new Date().getDate() === new Date(d).getDate() ? 'bg-primary text-secondary rounded-full' : 'p-1 '} flex items-center justify-center w-10 h-10 mx-auto font-bold text-3xl`}>
+                                <div className={`${new Date().getDate() === new Date(d).getDate() ? 'bg-primary text-secondary rounded-full' : ''} flex items-center justify-center w-10 h-10 mx-auto font-bold text-2xl p-6`}>
                                     {new Date(d).getDate()}
                                 </div>
+                                <div className="bg-gray bg-opacity-20 py-2 m-2 rounded-full text-center">1:00 PM</div>
+                                <div className="bg-gray bg-opacity-20 py-2 m-2 rounded-full text-center">1:00 PM</div>
                             </td>
                         ))}
                     </tr>

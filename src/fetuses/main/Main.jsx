@@ -37,26 +37,26 @@ function Main() {
           <Outlet />
         </div>
         {/* tab bar part */}
-        <div style={{ height: TAB_BAR_HEIGHT }} className='h-16 flex hiden justify-between bg-white fixed bottom-0 w-screen px-3'>
+        <div style={{ height: TAB_BAR_HEIGHT }} className='h-16 flex hiden justify-between bg-white fixed bottom-0 w-screen px-3 font-manrope text-xs'>
           <NavLink to={HOME} className={({ isActive }) => `flex flex-col justify-center items-center  ${isActive ? "stroke-primary text-primary" : "stroke-gray text-gray"}`}>
             <HomeIcon className='size-7 cursor-pointer' />
-            <span className='text-sm font-manrope'>Home</span>
+            <span>Home</span>
           </NavLink>
           <NavLink to={ASSIGNED} className={({ isActive }) => `flex flex-col justify-center items-center ${isActive ? "stroke-primary text-primary" : "stroke-gray text-gray"}`}>
             <AssignedIcon className='size-7 cursor-pointer' />
-            <span className='text-sm font-manrope'>Assigned</span>
+            <span  >Assigned</span>
           </NavLink>
           <NavLink to={NEW_ASSIGNED} className={({ isActive }) => `flex flex-col justify-center items-center  ${isActive ? "stroke-primary text-primary" : "stroke-gray text-gray"}`}>
             <NewAssignedIcon className=' size-7 cursor-pointer' />
-            <span className='text-sm font-manrope'>New Assigned</span>
+            <span  >New Assigned</span>
           </NavLink>
           <NavLink to={KNOWLEDGE} className={({ isActive }) => `flex flex-col justify-center items-center  ${isActive ? "fill-primary text-primary" : "fill-gray text-gray"}`}>
             <KnowledgeIcon className=' size-7 cursor-pointer' />
-            <span className='text-sm font-manrope'>Knowledge Base</span>
+            <span  >Knowledge Base</span>
           </NavLink>
           <NavLink to={PROFILE} className={({ isActive }) => `flex flex-col justify-center items-center ${isActive ? "stroke-primary text-primary" : "stroke-gray text-gray"}`}>
             <ProfileIcon className='size-7 cursor-pointer' />
-            <span className='text-sm font-manrope'>Profile</span>
+            <span  >Profile</span>
           </NavLink>
         </div>
       </div>

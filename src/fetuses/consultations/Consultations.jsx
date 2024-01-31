@@ -12,8 +12,9 @@ export default function Consultations() {
                     <h2 className="text-2xl font-medium">January 2023</h2>
                     <div className="flex space-x-4">
                         <button className="bg-primary bg-opacity-30 text-primary w-20 text-xs font-medium rounded-lg py-2">Add Slot</button>
-                        <div className="flex items-center space-x-28">
-                            <ArrowBottom className="rotate-90" />
+                        <div className="flex items-center space-x-2">
+                            <ArrowBottom className="rotate-90 opacity-40" />
+                            <p className="opacity-30">Today</p>
                             <ArrowBottom className="-rotate-90" />
                         </div>
                     </div>
@@ -22,7 +23,7 @@ export default function Consultations() {
                     <Shedule />
                 </div>
             </div>
-            <div className="font-In space-y-10">
+            <div className="hidden xl:block  font-In space-y-10 ">
                 <div className="px-5 py-9 bg-primary bg-opacity-15 space-y-4 rounded-2xl">
                     <div className="space-x-4 flex items-center text-base font-medium leading-4">
                         <User />
