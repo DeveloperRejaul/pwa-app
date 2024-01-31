@@ -61,7 +61,7 @@ export default function Calender({ apiData }) {
     }
   }
   const getDate = (day) => {
-    const dt = apiData.find((d) => {
+    const dt = apiData?.find((d) => {
 
       return new Date(d.created).toDateString() === day;
     })
@@ -69,7 +69,6 @@ export default function Calender({ apiData }) {
     if (dt) return true;
     else false;
   }
-  console.log(apiData);
   // const todayDate = ({ day, date }) => {
   //   // if (day) {
   //   //   const dayNum = new Date(date).getDay();

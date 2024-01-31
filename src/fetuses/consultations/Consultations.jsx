@@ -1,10 +1,12 @@
 import React from 'react';
 import { ArrowBottom, Clock, User, World } from '../../asset/icon';
 import Button from '../../components/button/Button';
+import Calender from '../../components/calender/Calender';
+import Shedule from './components/Shedule';
 
 export default function Consultations() {
     return (
-        <div className="py-11 flex space-x-6">
+        <div className="mx-10 xl:mx-0 py-11 flex space-x-6">
             <div className="w-full">
                 <div className="flex justify-between">
                     <h2 className="text-2xl font-medium">January 2023</h2>
@@ -16,10 +18,13 @@ export default function Consultations() {
                         </div>
                     </div>
                 </div>
+                <div className="py-12">
+                    <Shedule />
+                </div>
             </div>
-            <div className="font-In">
-                <div className="px-5 py-9 bg-primary bg-opacity-15 space-y-4">
-                    <div className="space-x-1 flex items-center text-base font-medium leading-4">
+            <div className="font-In space-y-10">
+                <div className="px-5 py-9 bg-primary bg-opacity-15 space-y-4 rounded-2xl">
+                    <div className="space-x-4 flex items-center text-base font-medium leading-4">
                         <User />
                         <p className="whitespace-nowrap">Meet with User Lorem</p>
                     </div>
@@ -38,7 +43,10 @@ export default function Consultations() {
                             <p>Zoom</p>
                         </div>
                     </div>
-                    <Button text="Join Call" />
+                    <Button text="Join Call" className="h-11" />
+                </div>
+                <div>
+                    <Calender />
                 </div>
             </div>
         </div>
