@@ -17,4 +17,7 @@ import {ReactComponent as Logo} from './logo.svg'
 import {ReactComponent as Logout} from './Logout.svg'
 import {ReactComponent as Check} from './check.svg'
 
-export {Arrow,Filter,Search, ArrowBottom,HomeIcon,ProfileIcon,AssignedIcon,NewAssignedIcon,KnowledgeIcon,ArrowForward,ArrowRight,DownloadedIcon,Logo,Logout,Check,MessageIcon,GroupUser}
+import {ReactComponent as User} from './User.svg'
+import {ReactComponent as Clock} from './Clock.svg'
+import {ReactComponent as World} from './World.svg'
+export {Arrow,Filter,Search, ArrowBottom,HomeIcon,ProfileIcon,AssignedIcon,NewAssignedIcon,KnowledgeIcon,ArrowForward,ArrowRight,DownloadedIcon,Logo,Logout,Check,MessageIcon,GroupUser,User,Clock,World}

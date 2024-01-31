@@ -10,12 +10,16 @@ export default function Setting() {
                 </div>
                 <div className="py-5 space-y-6">
                     <div>
-                        <h2 className="font-semibold text-lg leading-6 pb-2">EMail Notification</h2>
-                        <p className="text-sm font-normal leading-6">When you’re busy or not online, Substance can send you email notifications for any new direct messages or mentions of your name.</p>
-
+                        <h2 className="font-semibold text-lg leading-6 pb-2">
+                            Email Notification
+                        </h2>
+                        <p className="text-sm font-normal leading-6">
+                            When you’re busy or not online, Substance can send you email notifications for any new direct messages or mentions of your name.
+                        </p>
                     </div>
                     <div>
-                        <p className="font-semibold text-lg leading-6 pb-2">Send me email notfication</p>
+                        <p className="font-semibold text-lg leading-6 pb-2">
+                            Send me email notfication</p>
                         <div className="space-y-3 flex flex-col">
                             <span className="flex items-center space-x-3">
                                 <input className="accent-primary border-none  w-6 h-6" type="radio" />
