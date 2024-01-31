@@ -6,7 +6,7 @@ function Profile() {
   return (
     <>
       <ProfileDsk />
-      <div className='block md:hidden mx-3 space-y-2'>
+      <div className='block xl:hidden mx-3 space-y-2'>
         <div className='flex flex-row items-center space-x-3 px-2 border py-2 border-border rounded-lg'>
           <div className='h-12 w-12 rounded-full overflow-hidden'>
             <img src={uri} alt="profile" />

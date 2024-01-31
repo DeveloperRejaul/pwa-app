@@ -4,7 +4,7 @@ import { ArrowBottom } from '../../asset/icon'
 
 export default function AllRequest() {
     return (
-        <div className="py-20">
+        <div className="py-20 mx-10 xl:mx-0">
             <div className="flex justify-between items-center pb-4">
                 <div className="space-y-2">
                     <h2 className="text-2xl font-medium leading-9">All Request</h2>
@@ -15,7 +15,9 @@ export default function AllRequest() {
                     <ArrowBottom />
                 </div>
             </div>
-            <TblAllReq />
+            <div className="overflow-auto">
+                <TblAllReq />
+            </div>
         </div>
     )
 }

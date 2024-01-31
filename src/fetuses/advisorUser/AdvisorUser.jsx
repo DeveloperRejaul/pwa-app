@@ -1,9 +1,9 @@
 import React from 'react'
-import TblAdvisor from './TblAdvisor'
+import TblAdvisor from './components/TblAdvisor'
 
 export default function AdvisorUser() {
     return (
-        <div>
+        <div className="mx-10 xl:mx-0">
             <TblAdvisor />
         </div>
     )

@@ -7,7 +7,7 @@ function Assigned() {
   return (
     <>
       <AssignDsk />
-      <div className='md:hidden flex flex-col items-center space-y-4'>
+      <div className='xl:hidden flex flex-col items-center space-y-4'>
         <Dropdown />
         {db.data.map((d, i) => <Card selectItem="Ongoing" key={i} />)}
       </div>

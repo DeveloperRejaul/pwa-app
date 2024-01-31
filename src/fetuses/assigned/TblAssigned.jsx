@@ -3,7 +3,7 @@ import CheckBox from '../../components/checkBox/CheckBox'
 import fakeData from '../../db/AllRequest.json';
 import TblRow from '../../components/table/TblRow';
 import { ArrowRight, Check } from '../../asset/icon';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const TblHeader = ["Request Id", "User Name", "Date Created", "Request Type", "Status"];
 
@@ -11,8 +11,8 @@ export default function TblAssigned() {
     const navigate = useNavigate();
     const [fetchData, setFetchData] = useState(fakeData)
     return (
-        <table className="bg-[#FCFCFC] font-poppins w-full overflow-auto">
-            <thead className="text-base font-normal text-[#A3A3A3] capitalize">
+        <table className="font-poppins w-full overflow-auto">
+            <thead className="text-base font-normal text-gray capitalize">
                 <tr className="text-left">
                     <th className="py-[1.813rem]">
                         <div className="flex justify-center h-full py-[1.813rem] px-3  border-l-[0.438rem]  border-transparent">

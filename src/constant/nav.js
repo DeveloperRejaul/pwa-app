@@ -1,6 +1,7 @@
 export const NAV_PATH = {
     HOME: '/',
     PROFILE: '/profile',
+    SETTING: '/setting',
     PROFILE_DETAILS: '/profile-details',
     ASSIGNED: '/assigned',
     ADVISORY: '/advisor',

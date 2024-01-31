@@ -12,11 +12,12 @@ const Menu = [
     { name: "Knowledge base", path: NAV_PATH.KNOWLEDGE, icon: KnowledgeIcon },
     { name: "Advisor User", path: NAV_PATH.ADVISORY, icon: GroupUser },
     { name: "Profile", path: NAV_PATH.PROFILE, icon: ProfileIcon },
+    { name: "Setting", path: NAV_PATH.SETTING, icon: ProfileIcon },
 ]
 export default function Layout() {
 
     return (
-        <div className="flex p-4 h-screen">
+        <div className="flex p-4 h-screen font-poppins">
             <div className="py-[1.98rem] bg-gray/10 h-[95vh] w-[22.375rem] px-7 overflow-y-auto rounded-lg flex flex-col justify-between">
                 <div className="space-y-16">
                     <div className="flex items-center justify-between ">
