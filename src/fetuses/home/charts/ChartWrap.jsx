@@ -10,7 +10,7 @@ export default function ChartWrap() {
                 <div className="space-x-12 font-medium opacity-50">
                     <button>Day</button>
                     <button>Week</button>
-                    <button>Month</button>
+                    <button className="font-bold">Month</button>
                     <button>Year</button>
                 </div>
             </div>
