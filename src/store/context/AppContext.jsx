@@ -1,8 +1,9 @@
 import React, { createContext } from "react";
-import GlobalHook from "../../hooks/GlobalHook";
+import useGlobal from "../../hooks/useGlobal";
+
 export const Context = createContext()
 
 export function AppContext({ children }) {
-    const value = GlobalHook();
-    return <Context.Provider value={value}>{children}</Context.Provider>
+    const value = useGlobal();
+    return <Context.Provider value={{ ...value }}>{children}</Context.Provider>
 }

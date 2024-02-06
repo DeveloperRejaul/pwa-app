@@ -4,6 +4,8 @@ import { AssignedIcon, HomeIcon, KnowledgeIcon, NewAssignedIcon, ProfileIcon } f
 import { NAV_PATH } from '../../constant/nav';
 import { useLocation } from 'react-router-dom';
 import Layout from '../layout/Layout';
+import useGlobal from '../../hooks/useGlobal';
+import { useAppContext } from '../../hooks/useAppContext';
 
 const TITLE_HEIGHT = 50;
 const TAB_BAR_HEIGHT = 70;
@@ -20,11 +22,19 @@ const titles = {
 function Main() {
   const { pathname } = useLocation()
   const route = pathname.slice(1);
+  const { user } = useAppContext()
+
+  const userRule = {
+    admin: "",
+    user: "hidden xl:block"
+  }
+
 
   return (
     <>
       {/* Desktop view */}
-      <div className="hidden xl:block">
+
+      <div className={`${userRule[user.role]}`}>
         <Layout />
       </div>
       {/* Mobile View */}
