@@ -1,10 +1,11 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useState } from 'react'
 import CheckBox from '../../components/checkBox/CheckBox'
 import TblRow from '../../components/table/TblRow'
 import fakeData from '../../db/AllRequest.json';
 import { ArrowBottom, ArrowRight } from '../../asset/icon';
 import ModalAssign from './ModalAssign';
 import ReactPaginate from 'react-paginate';
+import Pagination from '../../components/Pagination/Pagination';
 
 const TblHeader = ["Request Id", "User Name", "Date Created", "Request Type", "Assigned"];
 
@@ -55,35 +56,14 @@ export default function TblAllReq() {
                                 </div>
                             </TblRow>
                             <TblRow>
-                                <ArrowRight onClick={() => { }} />
+                                <ArrowRight onClick={() => { }} className="cursor-pointer" />
                             </TblRow>
                         </tr>
                     ))}
                 </tbody>
             </table>
-            <div className="mt-10 ">
-                <ReactPaginate
-                    breakLabel="..."
-                    previousLabel={
-                        <div className="border rounded-l-md border-r-0 w-16 border-primary opacity-50 flex items-center justify-center">
-                            <ArrowBottom className="rotate-90 h-[3.9rem] w-9" />
-                        </div>
-                    }
-                    nextLabel={
-                        <div className="border rounded-r-md border-l-0 w-16 border-primary opacity-50 flex items-center justify-center">
-                            <ArrowBottom className="-rotate-90 h-[3.9rem] w-9" />
-                        </div>
-                    }
-                    // nextClassName="w-10 h-10"
-                    onPageChange={() => { }}
-                    pageRangeDisplayed={5}
-                    pageCount={10}
-                    renderOnZeroPageCount={null}
-                    containerClassName="flex items-center h-16 justify-end w-full overflow-auto"
-                    breakLinkClassName="p-[1.2rem] border border-l-0 border-r-0 border-primary border-opacity-40"
-                    activeClassName="bg-primary text-secondary"
-                    pageClassName="border border-primary border-opacity-40 h-full w-14 flex items-center justify-center text-xl font-normal text-headline"
-                />
+            <div className="mt-10">
+                <Pagination pageRangeDisplayed={5} totalCount={10} />
             </div>
         </>
     )

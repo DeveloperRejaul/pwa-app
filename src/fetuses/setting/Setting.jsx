@@ -5,7 +5,7 @@ export default function Setting() {
         <div className="pt-11">
             <div>
                 <div className="font-medium space-x-5">
-                    <button className="underline underline-offset-8 decoration-4 text-2xl">Notification</button>
+                    <button className="underline underline-offset-8 decoration-2 text-2xl">Notification</button>
                     <button className="opacity-50 text-xl">Password</button>
                 </div>
                 <div className="py-5 space-y-6">
