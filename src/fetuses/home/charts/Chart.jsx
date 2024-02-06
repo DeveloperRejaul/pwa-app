@@ -48,11 +48,20 @@ export default function Chart() {
             grid: {
                 show: false
             },
-            // tooltip: {
-            //     x: {
-            //         format: 'dd/MM/yy HH:mm'
-            //     },
-            // },
+            tooltip: {
+                x: {
+                    format: 'dd/MM/yy HH:mm'
+                },
+            },
+            states: {
+                hover: {
+                    // Set the hover color for the line
+                    filter: {
+                        type: 'none',
+                        value: 0
+                    }
+                }
+            }
         },
     }
 
