@@ -9,7 +9,9 @@ const TblHeader = ["Request Id", "User Name", "Date Created", "Request Type", "S
 
 export default function TblAssigned() {
     const navigate = useNavigate();
-    const [fetchData, setFetchData] = useState(fakeData)
+    const [fetchData, setFetchData] = useState(fakeData);
+    const [selectData, setSelectData] = useState([]);
+
     return (
         <table className="font-poppins w-full overflow-auto">
             <thead className="text-base font-normal text-gray capitalize">
@@ -27,8 +29,8 @@ export default function TblAssigned() {
             </thead>
             <tbody>
                 {fetchData.map((d, i) => (
-                    <tr key={i} className="text-[#27364E] text-base font-medium leading-6">
-                        <TblRow checkBox />
+                    <tr key={i} className={`text-[#27364E] text-base font-medium leading-6 ${selectData.includes(d.id) ? 'shadow-lg' : ''}`}>
+                        <TblRow checkBox id={d.id} selectList={selectData} setSelectList={setSelectData} />
                         <TblRow>#{d.requestId}</TblRow>
                         <TblRow>
                             <div className="flex items-center space-x-2">

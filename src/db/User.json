@@ -1,0 +1,9 @@
+{
+    "name":"Advisor Lorem Name",
+    "icon":"https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+    "address":"Lorem Ipsum dolor sat, Lorem Ipsum dolor sat, 098765",
+    "birth":"17 Jul, 1969",
+    "mobile":"9876543210",
+    "gender":"Male",
+    "role":"user"
+}

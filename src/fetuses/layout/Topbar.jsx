@@ -11,8 +11,9 @@ export default function Topbar({ menu }) {
         const fd = menu.find((m) => m?.path === pathname);
         if (fd) setTitle(fd?.name);
     }, [location.pathname]);
+
     return (
-        <div className="flex justify-between items-center h-[3.5rem]">
+        <div className="flex justify-between items-center h-[3.5rem] pt-9">
             <div className="space-y-2">
                 <p className="font-semibold text-2xl">{title || 'Unkknown'}</p>
                 <p className="text-base font-normal text-gray">Farm DSS Advisor Panel</p>

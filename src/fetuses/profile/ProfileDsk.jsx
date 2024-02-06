@@ -5,9 +5,9 @@ import Modal from '../../components/modal/Modal'
 export default function ProfileDsk() {
     const [show, setShow] = useState(false);
     return (
-        <div className="hidden xl:block py-20">
-            <div className="flex space-x-20">
-                <div>
+        <div className="py-20">
+            <div className="flex flex-col xl:flex-row items-center xl:items-start space-y-10 xl:space-y-0 space-x-20">
+                <div className="">
                     <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
                         alt="img" className="min-w-[16rem] h-64 rounded-full object-center" />
                     <div className="pt-10 space-y-3 flex flex-col items-center">

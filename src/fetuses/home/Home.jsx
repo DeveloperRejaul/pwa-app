@@ -4,15 +4,18 @@ import db from '../../db/homeCard.json'
 import { useNavigate } from "react-router-dom"
 import { NAV_PATH } from '../../constant/nav'
 import HomeWrap from './HomeWrap'
+import { useAppContext } from '../../hooks/useAppContext';
 
 function Home() {
-
+  const { user } = useAppContext();
   const navigate = useNavigate()
 
   return (
     <>
-      <HomeWrap />
-      <div className='xl:hidden flex flex-col items-center'>
+      <div className={`${user.role === 'admin' ? '' : 'hidden xl:block'}`}>
+        <HomeWrap />
+      </div>
+      <div className={`${user.role === 'admin' ? 'hidden' : 'xl:hidden flex flex-col items-center'}`}>
         {db.data.map((d, i) => (
           <div key={i}>
             <p className='font-bold text-xl text-gray-800 mt-5 mb-2'>{d.title}</p>

@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from 'react'
 import CheckBox from '../../components/checkBox/CheckBox'
 import TblRow from '../../components/table/TblRow'
 import fakeData from '../../db/AllRequest.json';
-import Button from '../../components/button/Button';
 import { ArrowRight } from '../../asset/icon';
 import ModalAssign from './ModalAssign';
 
@@ -11,7 +10,7 @@ const TblHeader = ["Request Id", "User Name", "Date Created", "Request Type", "A
 export default function TblAllReq() {
     const [showAssign, setShowAssign] = useState(null);
     const [fetchData, setFetchData] = useState(fakeData);
-    const refAssing = useRef();
+    const [selectData, setSelectData] = useState([]);
 
     const setShowModal = (id) => {
         setShowAssign((prev) => prev === id ? null : id);
@@ -34,8 +33,8 @@ export default function TblAllReq() {
             </thead>
             <tbody>
                 {fetchData.map((d, i) => (
-                    <tr key={i} className="text-[#27364E] text-base font-medium leading-6">
-                        <TblRow checkBox />
+                    <tr key={i} className={`text-[#27364E] text-base font-medium leading-6 ${selectData.includes(d.id) ? 'shadow-lg' : ''}`}>
+                        <TblRow checkBox id={d.id} selectList={selectData} setSelectList={setSelectData} />
                         <TblRow>#{d.requestId}</TblRow>
                         <TblRow>
                             <div className="flex items-center space-x-2">

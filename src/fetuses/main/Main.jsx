@@ -28,7 +28,7 @@ function Main() {
         <Layout />
       </div>
       {/* Mobile View */}
-      <div className='h-screen overflow-hidden block xl:hidden'>
+      <div className='h-screen overflow-hidden block xl:hidden pt-5'>
         {/* header part */}
         <p style={{ height: TITLE_HEIGHT }} className='font-bold text-2xl bg-gray-100 text-gray-700 text-center h-10'>{titles[pathname]}</p>
 

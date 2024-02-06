@@ -5,11 +5,13 @@ const uri = "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=
 function Profile() {
   return (
     <>
-      <ProfileDsk />
-      <div className='block xl:hidden mx-3 space-y-2'>
+      <div className="">
+        <ProfileDsk />
+      </div>
+      {/* <div className='block xl:hidden mx-3 space-y-2'>
         <div className='flex flex-row items-center space-x-3 px-2 border py-2 border-border rounded-lg'>
-          <div className='h-12 w-12 rounded-full overflow-hidden'>
-            <img src={uri} alt="profile" />
+          <div className='min-h-[3rem] min-w-[3rem] rounded-full overflow-hidden bg-secondary'>
+            <img src={uri} alt="profile" className="h-full w-full" />
           </div>
           <p className='text-headline font-bold text-lg'>Karna</p>
         </div>
@@ -31,7 +33,7 @@ function Profile() {
             <p className='text-paragraph text-lg '>Male</p>
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   )
 }
