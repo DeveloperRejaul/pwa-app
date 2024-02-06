@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 export default function FarmerProfile() {
     const navigate = useNavigate()
     return (
-        <div className='mx-3 space-y-2 h-screen'>
+        <div className='mx-3 space-y-2 h-screen pt-10'>
             <div className='flex items-center justify-between px-4'>
                 <ArrowForward onClick={() => navigate("..", { relative: "path" })} className='rotate-180 text-5xl cursor-pointer' />
                 <h1 className="font-bold text-2xl font-manrope bg-white text-headline text-center h-10">Farmer’s Profile</h1>

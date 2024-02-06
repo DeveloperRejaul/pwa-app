@@ -33,12 +33,11 @@ function Main() {
   return (
     <>
       {/* Desktop view */}
-
-      <div className={`${userRule[user.role]}`}>
+      <div className={`${userRule[user?.role]}`}>
         <Layout />
       </div>
       {/* Mobile View */}
-      <div className='h-screen overflow-hidden block xl:hidden pt-5'>
+      <div className={`${user.role === 'admin' ? 'hidden' : 'h-screen overflow-hidden block xl:hidden pt-5'} `}>
         {/* header part */}
         <p style={{ height: TITLE_HEIGHT }} className='font-bold text-2xl bg-gray-100 text-gray-700 text-center h-10'>{titles[pathname]}</p>
 

@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink, Outlet } from 'react-router-dom'
-import { AssignedIcon, GroupUser, HomeIcon, KnowledgeIcon, Logo, Logout, MessageIcon, NewAssignedIcon, ProfileIcon } from '../../asset/icon'
+import { ArrowBottom, AssignedIcon, GroupUser, HomeIcon, KnowledgeIcon, Logo, Logout, MessageIcon, NewAssignedIcon, ProfileIcon } from '../../asset/icon'
 import Topbar from './Topbar'
 import { NAV_PATH } from '../../constant/nav';
 import { useAppContext } from '../../hooks/useAppContext';
@@ -24,17 +24,22 @@ const AdminMenu = [
 ]
 export default function Layout() {
     const { user, setUser } = useAppContext();
+    const [showNav, setShowNav] = useState(false);
     // For Testing and change role based rander menu list
     const onChangeRole = () => setUser((prev) => ({ ...prev, role: prev.role === 'admin' ? 'user' : 'admin' }));
 
     return (
         <div className="flex p-4 h-screen font-poppins">
-            <div className="py-[1.98rem] bg-gray/10 h-[95vh] w-[22.375rem] px-7 overflow-y-auto rounded-lg flex flex-col justify-between">
+            <div className={`flex flex-col justify-between py-[1.98rem] bg-gray/10 h-[95vh] w-[22.375rem] px-7 overflow-y-auto rounded-lg ${user?.role === 'admin' ? `absolute md:relative shadow-2xl md:shadow-none z-10 bg-white ${showNav ? 'translate-x-0' : '-translate-x-96 md:translate-x-0 '}` : ''} transition-all duration-500`}>
                 <div className="space-y-16">
-                    <div className="flex items-center justify-between ">
+                    <div className="flex items-center justify-between relative ">
                         <div className="flex items-center before:space-x-2">
                             <Logo className="w-16 h-11" />
                             <p className="text-primary text-2xl font-semibold">Logoipsum</p>
+                        </div>
+                        <div className="md:hidden absolute right-0  z-50 bg-secondary h-6 w-6 shadow-2xl rounded-full flex items-center justify-center border border-primary"
+                            onClick={() => setShowNav(!showNav)}>
+                            <ArrowBottom className="rotate-90" />
                         </div>
                     </div>
                     <div className="space-y-2">
@@ -67,7 +72,7 @@ export default function Layout() {
             </div>
 
             <div className="w-full px-14 h-[95vh] ">
-                <Topbar menu={user.role === 'admin' ? AdminMenu : UsrMenu} />
+                <Topbar menu={user.role === 'admin' ? AdminMenu : UsrMenu} setShowNav={setShowNav} />
                 <div className="pb-5 h-[91.5vh] overflow-auto no-scrollbar">
                     <Outlet />
                 </div>

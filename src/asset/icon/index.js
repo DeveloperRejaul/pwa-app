@@ -20,4 +20,7 @@ import {ReactComponent as Check} from './check.svg'
 import {ReactComponent as User} from './User.svg'
 import {ReactComponent as Clock} from './Clock.svg'
 import {ReactComponent as World} from './World.svg'
-export {Arrow,Filter,Search, ArrowBottom,HomeIcon,ProfileIcon,AssignedIcon,NewAssignedIcon,KnowledgeIcon,ArrowForward,ArrowRight,DownloadedIcon,Logo,Logout,Check,MessageIcon,GroupUser,User,Clock,World}
+import {ReactComponent as Menu} from './Menu.svg'
+
+
+export {Arrow,Filter,Search,Menu, ArrowBottom,HomeIcon,ProfileIcon,AssignedIcon,NewAssignedIcon,KnowledgeIcon,ArrowForward,ArrowRight,DownloadedIcon,Logo,Logout,Check,MessageIcon,GroupUser,User,Clock,World}
