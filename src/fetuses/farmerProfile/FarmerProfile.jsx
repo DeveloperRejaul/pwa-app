@@ -2,6 +2,9 @@ import React from 'react'
 import { ArrowForward } from '../../asset/icon'
 const uri = "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
 import { useNavigate } from 'react-router-dom'
+import { NAV_PATH } from '../../constant/nav'
+import Button from "../../components/button/Button"
+
 export default function FarmerProfile() {
     const navigate = useNavigate()
     return (
@@ -11,7 +14,7 @@ export default function FarmerProfile() {
                 <h1 className="font-bold text-2xl font-manrope bg-white text-headline text-center h-10">Farmer’s Profile</h1>
                 <div />
             </div>
-
+            <Button text={"Open Chat"} className={"absolute w-[90%] bottom-20 h=[52px]"} onClick={() => navigate(NAV_PATH.CHAT)} />
             {/* user info  Items  */}
             <div className='space-y-4 overflow-y-scroll h-[90vh] px-2'>
                 <div className='flex flex-row items-center space-x-3 px-2 border py-2 border-border rounded-lg'>

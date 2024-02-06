@@ -82,7 +82,7 @@ export default function Calender({ apiData }) {
   // }
   return (
     <div
-      className="border border-primary rounded-lg px-9 py-6 border-opacity-45"
+      className="border border-primary rounded-lg px-9 py-6 border-opacity-45 w-[326px]"
     >
       <div
         className="flex justify-between items-center px-2 py-4"
