@@ -7,7 +7,7 @@ export default function FarmerProfile() {
     const navigate = useNavigate();
     return (
         <div className='space-y-2 h-screen xl:pt-10 relative'>
-            <div className="fixed bottom-20 left-1/2 translate-x-[-50%]">
+            <div className="fixed bottom-20 xl:bottom-5 left-1/2 translate-x-[-50%]">
                 <Button type="button" onClick={() => navigate('/chat')} text="Open Chat" className="whitespace-nowrap w-40 md:w-96 h-12" />
             </div>
             <div className='flex items-center justify-between px-4'>

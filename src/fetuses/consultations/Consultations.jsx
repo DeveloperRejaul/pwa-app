@@ -9,7 +9,7 @@ export default function Consultations() {
     const [showModal, setShowModal] = useState(false);
 
     return (
-        <div className="mx-10 xl:mx-0 py-11 flex space-x-6">
+        <div className="py-20 mx-10 xl:mx-0 flex space-x-6">
             <div className="w-full">
                 <div className="flex justify-between">
                     <h2 className="text-2xl font-medium">January 2023</h2>
@@ -20,7 +20,7 @@ export default function Consultations() {
                                 <AddSlot />
                             </div>
                         ) : ''}
-                        <div className="flex items-center space-x-2">
+                        <div className="flex items-center space-x-2 bg-primary bg-opacity-10 px-2 rounded-xl">
                             <ArrowBottom className="rotate-90 opacity-40" />
                             <p className="opacity-30">Today</p>
                             <ArrowBottom className="-rotate-90" />
