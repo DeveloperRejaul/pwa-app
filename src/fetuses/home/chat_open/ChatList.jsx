@@ -1,7 +1,10 @@
 import React from 'react';
 import FakeDate from '../../../db/AllRequest.json';
+import { useNavigate } from 'react-router-dom';
 
 export default function ChatList() {
+    const navigate = useNavigate();
+
     return (
         <div className="space-y-12">
             <div className="flex justify-between items-center">
@@ -17,7 +20,7 @@ export default function ChatList() {
                             <p className="font-medium">{d.username}</p>
                         </div>
                         <p>{new Date().toLocaleDateString()}</p>
-                        <button className="bg-primary text-secondary rounded-lg h-8 w-[5.8rem] text-sm" type="button">Open Chat</button>
+                        <button onClick={() => navigate('/chat')} className="bg-primary text-secondary rounded-lg h-8 w-[5.8rem] text-sm" type="button">Open Chat</button>
                     </div>
                 ))}
             </div>
