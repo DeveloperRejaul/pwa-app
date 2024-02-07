@@ -6,7 +6,7 @@ const Header = ({ data }) => {
     const navigate = useNavigate()
     const { status, name, image } = data;
     return (
-        <div className='py-3 flex gap-6 items-center '>
+        <div className='py-3 flex gap-6 items-center bg-primary bg-opacity-30 rounded-t-xl'>
             <Arrow onClick={() => navigate("..", { relative: "path" })} className='cursor-pointer' />
             <div className="flex gap-2 items-center">
                 <div className="rounded-full h-10 w-10 p-[2px] overflow-hidden border border-primary ">

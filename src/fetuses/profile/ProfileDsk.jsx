@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import Button from '../../components/button/Button'
-import Modal from '../../components/modal/Modal'
+import Password from './Password/Password';
+import Otp from './Password/Otp';
+import Forget from './Password/Forget'
 
 export default function ProfileDsk() {
-    const [show, setShow] = useState(false);
+    const [show, setShow] = useState({ pass: false, otp: false, forget: false });
     return (
         <div className="py-20">
             <div className="flex flex-col xl:flex-row items-center xl:items-start space-y-10 xl:space-y-0 space-x-20">
@@ -13,22 +15,15 @@ export default function ProfileDsk() {
                     <div className="pt-10 space-y-3 flex flex-col items-center">
                         <p className="text-2xl font-medium ">Advisor Lorem Name</p>
                         <Button className="h-16" text="Edit Data" />
-                        {show && (<Modal setState={setShow}>
-                            <div className="pt-11 px-11 space-y-2">
-                                <h2 className=" text-2xl font-bold text-gray">Change Your Password</h2>
-                                <p className="text-sm">Your new password must be defferent from previous used passwords</p>
-                            </div>
-
-                            <div className=" p-11 space-y-4">
-                                <input type="text" placeholder="Current Password" className="py-2 w-full outline-none border-b border-gray border-opacity-50" />
-                                <input type="text" placeholder="Confirm Current Password" className="py-2 w-full outline-none border-b border-gray border-opacity-50" />
-                                <input type="text" placeholder="New Password" className="py-2 w-full outline-none border-b border-gray border-opacity-50" />
-                                <input type="text" placeholder="Confirm New Password" className="py-2 w-full outline-none border-b border-gray border-opacity-50" />
-                            </div>
-                            <div className="px-11 pb-5">
-                                <Button text="Update Password" className="h-16 w-full" onClick={() => setShow(true)} />
-                            </div>
-                        </Modal>)}
+                        {show.pass && (
+                            <Password setState={setShow} />
+                        )}
+                        {show.otp && (
+                            <Otp setState={setShow} />
+                        )}
+                        {show.forget && (
+                            <Forget setState={setShow} />
+                        )}
                     </div>
                 </div>
                 <div className="space-y-4">
@@ -52,7 +47,7 @@ export default function ProfileDsk() {
                             </tr>
                         </tbody>
                     </table>
-                    <Button className="h-16 w-72" text="Change Password" onClick={() => setShow(true)} />
+                    <Button className="h-16 w-72" text="Change Password" onClick={() => setShow((prev) => ({ pass: true, forget: false, otp: false }))} />
                 </div>
             </div>
         </div>

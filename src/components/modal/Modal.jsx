@@ -5,9 +5,8 @@ export default function Modal({ children, setState = () => { } }) {
 
     const onClose = (e) => {
         if (refModal?.current?.contains && !refModal.current.contains(e.target)) {
-            setState(false);
+            setState({ forget: false, pass: false, otp: false });
         }
-        console.log("hit");
     }
     return (
         <div className="relative z-10">
