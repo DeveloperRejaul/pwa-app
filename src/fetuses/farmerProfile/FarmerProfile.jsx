@@ -2,18 +2,21 @@ import React from 'react'
 import { ArrowForward } from '../../asset/icon'
 const uri = "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
 import { useNavigate } from 'react-router-dom'
+import Button from '../../components/button/Button'
 export default function FarmerProfile() {
-    const navigate = useNavigate()
+    const navigate = useNavigate();
     return (
-        <div className='mx-3 space-y-2 h-screen pt-10'>
+        <div className='space-y-2 h-screen xl:pt-10 relative'>
+            <div className="fixed bottom-20 left-1/2 translate-x-[-50%]">
+                <Button type="button" onClick={() => navigate('/chat')} text="Open Chat" className="whitespace-nowrap w-40 md:w-96 h-12" />
+            </div>
             <div className='flex items-center justify-between px-4'>
                 <ArrowForward onClick={() => navigate("..", { relative: "path" })} className='rotate-180 text-5xl cursor-pointer' />
-                <h1 className="font-bold text-2xl font-manrope bg-white text-headline text-center h-10">Farmer’s Profile</h1>
+                <h1 className="font-bold text-base md:text-2xl font-manrope bg-white text-headline text-center">Farmer’s Profile</h1>
                 <div />
             </div>
-
             {/* user info  Items  */}
-            <div className='space-y-4 overflow-y-scroll h-[90vh] px-2'>
+            <div className='space-y-4 overflow-auto h-[90vh] px-4'>
                 <div className='flex flex-row items-center space-x-3 px-2 border py-2 border-border rounded-lg'>
                     <div className='h-12 w-12 rounded-full overflow-hidden'>
                         <img src={uri} alt="profile" />
