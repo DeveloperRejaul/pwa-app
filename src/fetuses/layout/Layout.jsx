@@ -71,9 +71,9 @@ export default function Layout() {
                 </button>
             </div>
 
-            <div className="w-full px-14 h-[95vh] ">
+            <div className="w-full px-14 h-[95vh]">
                 <Topbar menu={user.role === 'admin' ? AdminMenu : UsrMenu} setShowNav={setShowNav} />
-                <div className="pb-5 h-[91.5vh] overflow-auto no-scrollbar">
+                <div className="pb-5 h-[81.5vh] overflow-auto no-scrollbar">
                     <Outlet />
                 </div>
             </div>

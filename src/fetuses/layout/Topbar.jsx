@@ -10,10 +10,11 @@ export default function Topbar({ menu, setShowNav = () => { } }) {
     useEffect(() => {
         const fd = menu.find((m) => m?.path === pathname);
         if (fd) setTitle(fd?.name);
+        else setTitle(pathname.replace('/', ''));
     }, [location.pathname]);
 
     return (
-        <div className="flex justify-between items-center h-[3.5rem] pt-9">
+        <div className="flex justify-between items-center h-[9.5rem]">
             <div className="space-y-2">
                 <p className="font-semibold text-2xl">{title || 'Unknown'}</p>
                 <p className="text-base font-normal text-gray">Farm DSS Advisor Panel</p>
