@@ -12,10 +12,10 @@ function Home() {
 
   return (
     <>
-      <div className={`${user.role === 'admin' ? '' : 'hidden xl:block'}`}>
+      <div className={`${user.role === 'admin' ? '' : 'hidden md:block'}`}>
         <HomeWrap />
       </div>
-      <div className={`${user.role === 'admin' ? 'hidden' : 'xl:hidden flex flex-col items-center'}`}>
+      <div className={`${user.role === 'admin' ? 'hidden' : 'md:hidden flex flex-col items-center'}`}>
         {db.data.map((d, i) => (
           <div key={i}>
             <p className='font-bold text-xl text-gray-800 mt-5 mb-2'>{d.title}</p>

@@ -5,7 +5,7 @@ import Calender from '../../components/calender/Calender';
 import Shedule from './components/Shedule';
 import AddSlot from './components/AddSlot';
 
-export default function Consultations() {
+export default function UserConsultations() {
     const [showModal, setShowModal] = useState(false);
 
     return (
@@ -32,7 +32,7 @@ export default function Consultations() {
                     <Shedule />
                 </div>
             </div>
-            <div className="hidden xl:block  font-In space-y-10 ">
+            <div className="hidden md:block  font-In space-y-10 ">
                 <div className="px-5 py-9 bg-primary bg-opacity-15 space-y-4 rounded-2xl">
                     <div className="space-x-4 flex items-center text-base font-medium leading-4">
                         <User />

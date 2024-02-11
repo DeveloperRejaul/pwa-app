@@ -5,7 +5,7 @@ import Button from '../../components/button/Button';
 export default function ModalAssign() {
 
     return (
-        <div className="absolute border border-opacity-30 border-primary rounded-3xl bg-white z-10 right-0 space-y-8">
+        <div className="absolute border border-opacity-30 border-primary rounded-3xl bg-white z-10 right-0 top-[110%] space-y-8 ">
             <div className="px-11 pt-11">
                 <input type="text" placeholder="Search here" className="rounded-2xl h-16 outline-none bg-secondary px-7 text-gray" />
             </div>

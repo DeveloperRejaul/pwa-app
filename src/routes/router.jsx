@@ -13,7 +13,7 @@ import FarmerProfile from "../fetuses/farmerProfile/FarmerProfile";
 import SunItem from "../fetuses/knowledge/subitem";
 import AllRequest from "../fetuses/allRequest/AllRequest";
 import AdvisorUser from "../fetuses/advisorUser/AdvisorUser";
-import Consultations from "../fetuses/consultations/Consultations";
+import Consultations from "../fetuses/consultations/index";
 import AdvisoryUserDetails from "../fetuses/advisorUser/components/AdvisoryUserDetails";
 import Setting from "../fetuses/setting/Setting";
 
@@ -84,21 +84,4 @@ export const router = createBrowserRouter([
             },
         ]
     },
-    // {
-    //     path: NAV_PATH.CARROT,
-    //     element: <SunItem />
-    // },
-
-    // {
-    //     path: NAV_PATH.FARMER_PROFILE,
-    //     element: <FarmerProfile />
-    // },
-    // {
-    //     path: NAV_PATH.KNOWLEDGE_DETAILS,
-    //     element: <KnowledgeDetails />
-    // },
-    // {
-    //     path: NAV_PATH.CHAT,
-    //     element: <Chat />
-    // },
 ])
