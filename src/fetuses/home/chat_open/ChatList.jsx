@@ -17,9 +17,9 @@ export default function ChatList() {
                         <div className="flex items-center space-x-2">
                             <img src={d.img} alt=""
                                 className="w-12 h-12 rounded-full overflow-hidden object-contain bg-gray " />
-                            <p className="font-medium">{d.username}</p>
+                            <p className="font-medium text-black font-manrope">{d.username}</p>
                         </div>
-                        <p>{new Date().toLocaleDateString()}</p>
+                        <p className='text-gray font-manrope font-semibold'>{new Date().toLocaleDateString()}</p>
                         <button onClick={() => navigate('/chat')} className="bg-primary text-secondary rounded-lg h-8 w-[5.8rem] text-sm" type="button">Open Chat</button>
                     </div>
                 ))}

@@ -4,7 +4,6 @@ import { AssignedIcon, HomeIcon, KnowledgeIcon, NewAssignedIcon, ProfileIcon } f
 import { NAV_PATH } from '../../constant/nav';
 import { useLocation } from 'react-router-dom';
 import Layout from '../layout/Layout';
-import useGlobal from '../../hooks/useGlobal';
 import { useAppContext } from '../../hooks/useAppContext';
 
 const TITLE_HEIGHT = 50;
@@ -26,7 +25,7 @@ function Main() {
 
   const userRule = {
     admin: "",
-    user: "hidden xl:block"
+    user: "hidden md:block"
   }
 
 
@@ -37,7 +36,7 @@ function Main() {
         <Layout />
       </div>
       {/* Mobile View */}
-      <div className={`${user.role === 'admin' ? 'hidden' : 'h-screen overflow-hidden block xl:hidden pt-5'} `}>
+      <div className={`${user.role === 'admin' ? 'hidden' : 'h-screen overflow-hidden block md:hidden pt-5'} `}>
         {/* header part */}
         <p style={{ height: TITLE_HEIGHT }} className='font-bold text-2xl bg-gray-100 text-gray-700 text-center h-10'>{titles[pathname]}</p>
 
@@ -61,11 +60,11 @@ function Main() {
           </NavLink>
           <NavLink to={KNOWLEDGE} className={({ isActive }) => `flex flex-col justify-center items-center  ${isActive ? "fill-primary text-primary" : "fill-gray text-gray"}`}>
             <KnowledgeIcon className=' size-7 cursor-pointer' />
-            <span  >Knowledge Base</span>
+            <span >Knowledge Base</span>
           </NavLink>
           <NavLink to={PROFILE} className={({ isActive }) => `flex flex-col justify-center items-center ${isActive ? "stroke-primary text-primary" : "stroke-gray text-gray"}`}>
             <ProfileIcon className='size-7 cursor-pointer' />
-            <span  >Profile</span>
+            <span >Profile</span>
           </NavLink>
         </div>
       </div>

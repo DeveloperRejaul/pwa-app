@@ -5,7 +5,11 @@ import Calender from '../../components/calender/Calender';
 import Shedule from './components/Shedule';
 import AddSlot from './components/AddSlot';
 
+<<<<<<<< HEAD:src/fetuses/consultations/UsrConsultations.jsx
+export default function UsrConsultations() {
+========
 export default function UserConsultations() {
+>>>>>>>> fix:src/fetuses/consultations/UserConsultations.jsx
     const [showModal, setShowModal] = useState(false);
 
     return (
