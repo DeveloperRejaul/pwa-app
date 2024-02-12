@@ -2,13 +2,13 @@ import React from 'react';
 
 export default function Setting() {
     return (
-        <div className="pt-11">
+        <div className="pb-11">
             <div>
                 <div className="font-medium space-x-5">
                     <button className="underline underline-offset-8 decoration-2 text-2xl">Notification</button>
-                    <button className="opacity-50 text-xl">Password</button>
+                    <button className="opacity-50 text-[1.19rem]">Password</button>
                 </div>
-                <div className="py-5 space-y-6">
+                <div className="pt-8 pb-6 space-y-6">
                     <div>
                         <h2 className="font-semibold text-lg leading-6 pb-2">
                             Email Notification
@@ -22,15 +22,15 @@ export default function Setting() {
                             Send me email notfication</p>
                         <div className="space-y-3 flex flex-col">
                             <span className="flex items-center space-x-3">
-                                <input className="accent-primary border-none  w-6 h-6" type="radio" />
+                                <input className="checked:accent-[#b2b2]  w-6 h-6 cursor-pointer" type="radio" name="emailNotify" />
                                 <label>Send me email notification</label>
                             </span>
                             <span className="flex items-center space-x-3">
-                                <input className="accent-primary border-none  w-6 h-6" type="radio" />
+                                <input className="checked:accent-[#b2b2]  w-6 h-6 cursor-pointer" type="radio" name="emailNotify" />
                                 <label>Once an hour at most</label>
                             </span>
                             <span className="flex items-center space-x-3">
-                                <input className="accent-primary border-none w-6 h-6" type="radio" checked />
+                                <input className=" checked:accent-[#b2b2] w-6 h-6 cursor-pointer" type="radio" defaultChecked name="emailNotify" />
                                 <label>Never</label>
                             </span>
                         </div>

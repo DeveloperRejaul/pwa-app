@@ -89,7 +89,7 @@ export default function Calender({ apiData }) {
       >
         <div className="text-2xl font-medium flex space-x-1 leading-5">
           <p>{monthNames[month]}</p>
-          <p className="text-primary">{year}</p>
+          <p className="text-red-500">{year}</p>
         </div>
         <div className="flex items-center space-x-4">
           <ArrowBottom className="rotate-90 cursor-pointer" onClick={handlePrevMonth} />

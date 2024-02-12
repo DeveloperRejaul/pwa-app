@@ -29,7 +29,7 @@ export default function Layout() {
     const onChangeRole = () => setUser((prev) => ({ ...prev, role: prev.role === 'admin' ? 'user' : 'admin' }));
 
     return (
-        <div className="md:grid grid-cols-12 h-screen font-poppins bg-red-500">
+        <div className="md:grid grid-cols-12 h-screen font-poppins">
             <div className="col-span-3 2xl:col-span-2  pl-5 py-[1.38rem] h-screen overflow-auto">
                 <div className={`h-full flex flex-col justify-between py-[1.98rem] bg-primary bg-opacity-10 px-7 overflow-y-auto rounded-lg ${user?.role === 'admin' ? `absolute md:relative shadow-2xl md:shadow-none z-10 ${showNav ? 'translate-x-0' : '-translate-x-96 md:translate-x-0 '}` : ''} transition-all duration-500`}>
                     <div className="space-y-16">
@@ -73,11 +73,11 @@ export default function Layout() {
                 </div>
             </div>
 
-            <div className="relative col-span-9 2xl:col-span-10 h-screen overflow-auto w-full">
-                <div className="absolute w-full px-5 xl:px-9">
-                    <Topbar menu={user.role === 'admin' ? AdminMenu : UsrMenu} setShowNav={setShowNav} />
+            <div className="col-span-9 2xl:col-span-10 h-screen  w-full overflow-auto">
+                <div className="top-0 sticky w-full px-5 xl:px-9 z-10">
+                    <Topbar menu={user?.role === 'admin' ? AdminMenu : UsrMenu} setShowNav={setShowNav} />
                 </div>
-                <div className="p-5 xl:px-9 pt-20 overflow-auto no-scrollbar">
+                <div className="p-5 xl:px-9 pt-[3.25rem] overflow-auto no-scrollbar font-poppins ">
                     <Outlet />
                 </div>
             </div>

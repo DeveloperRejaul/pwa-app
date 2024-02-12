@@ -34,3 +34,14 @@ module.exports = {
   plugins: [],
 }
 
+// table border ( root table table rounded)---
+// assign modal botton aligen
+// consultaion=> pagination not 
+// knowlage scroll hide
+// details knowlagebase3d
+// switch rounded
+// profile details-> advice user
+// home -bottom align calender and map
+// chat view+header
+// side bar change data
+

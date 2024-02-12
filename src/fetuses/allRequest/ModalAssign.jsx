@@ -5,9 +5,9 @@ import Button from '../../components/button/Button';
 export default function ModalAssign() {
 
     return (
-        <div className="absolute border border-opacity-30 border-primary rounded-3xl bg-white z-10 right-0 space-y-8">
+        <div className="absolute border border-opacity-30 border-primary rounded-3xl bg-white z-10 right-0 space-y-8 mt-9">
             <div className="px-11 pt-11">
-                <input type="text" placeholder="Search here" className="rounded-2xl h-16 outline-none bg-secondary bg-opacity-40 px-7 text-gray" />
+                <input type="text" placeholder="Search here..." className="rounded-2xl h-16 outline-none bg-secondary bg-opacity-40 px-7 text-gray" />
             </div>
             <div className="space-y-2 h-[24rem] overflow-auto px-11">
                 {fakeData.map((d, i) => (
@@ -16,7 +16,7 @@ export default function ModalAssign() {
                             <img src={d.img} alt="img" className="w-7 h-7 rounded-full" />
                             <p>{d.username}</p>
                         </div>
-                        <Button text="Assign user" />
+                        <Button text="Assign user" className="text-[0.67rem]" />
                     </div>
                 ))}
             </div>

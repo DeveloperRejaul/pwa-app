@@ -13,14 +13,14 @@ function Knowledge() {
     <Container>
       {
         data.map((d, i) => (
-          <div key={i} className='p-1 px-2 border-2 border-paragraph/25 rounded-md flex justify-between items-center space-x-6'>
-            <div className='space-x-3 flex'>
-              <div className='h-[50px] w-[70px] rounded-md bg-[#FFECD6] overflow-hidden'>
+          <div key={i} className='py-3 px-[0.94rem] border-2 border-paragraph/15 rounded-[1.19rem] flex justify-between items-center space-x-6'>
+            <div className='space-x-3 flex font-manrope items-center'>
+              <div className='h-[6rem] max-w-[6rem] rounded-[0.594rem] bg-[#FFECD6] overflow-hidden'>
                 <img src={d.uri} alt="logo" className='h-full w-full' />
               </div>
               <div>
-                <p className='text-headline font-semibold'>{d.name}</p>
-                <p className='text-paragraph'>{d.details}</p>
+                <p className='text-headline text-[1.59rem] tracking-[-0.016em] font-medium'>{d.name}</p>
+                <p className='text-paragraph font-[1.19rem] tracking-[-0.024em]'>{d.details}</p>
               </div>
             </div>
             <ArrowForward onClick={() => navigate(NAV_PATH.CARROT, { state: { name: d.name, img: d.uri } })} className='fill-primary text-6xl cursor-pointer' />
@@ -38,10 +38,10 @@ export default Knowledge
 
 function Container({ children }) {
   return (
-    <div className='pt-11 mx-2 h-screen overflow-hidden'>
+    <div className=' h-screen overflow-hidden'>
       <div className='space-y-4 h-screen overflow-hidden'>
-        <Input />
-        <div className='h-[90vh] overflow-y-scroll px-2 space-y-2 pb-40' >
+        {/* <Input /> */}
+        <div className='h-[90vh] overflow-y-scroll space-y-6 pb-40 no-scrollbar' >
           {children}
         </div>
       </div>

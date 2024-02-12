@@ -70,7 +70,8 @@ export default function Chart() {
             options={options.options}
             series={options.series}
             type="area"
-        // height={350}
+            height={400}
+        // width={400}
         />
     )
 }

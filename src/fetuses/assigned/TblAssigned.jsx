@@ -15,21 +15,21 @@ export default function TblAssigned() {
     return (
         <table className="font-poppins w-full overflow-auto">
             <thead className="text-base font-normal text-gray capitalize">
-                <tr className="text-left">
-                    <th className="py-[1.813rem]">
+                <tr className="text-left bg-[#F8F8F8]  rounded-xl">
+                    <th>
                         <div className="flex justify-center h-full py-[1.813rem] px-3  border-l-[0.438rem]  border-transparent">
                             <CheckBox />
                         </div>
                     </th>
                     {TblHeader.map((h, i) => (
-                        <th key={i} className="whitespace-nowrap px-3">{h}</th>
+                        <th key={i} className={`whitespace-nowrap px-3 text-base font-normal text-[#A3A3A3] capitalize ${i === 4 ? 'w-48' : ''}`}>{h}</th>
                     ))}
-                    <th></th>
+                    <th className="w-20"></th>
                 </tr>
             </thead>
             <tbody>
                 {fetchData.map((d, i) => (
-                    <tr key={i} className={`text-[#27364E] text-base font-medium leading-6 ${selectData.includes(d.id) ? 'shadow-lg' : ''}`}>
+                    <tr key={i} className={`text-[#27364E] border border-gray border-opacity-15  text-base font-medium leading-6 ${selectData.includes(d.id) ? 'shadow-lg' : ''}`}>
                         <TblRow checkBox id={d.id} selectList={selectData} setSelectList={setSelectData} />
                         <TblRow>#{d.requestId}</TblRow>
                         <TblRow>
