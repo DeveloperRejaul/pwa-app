@@ -29,8 +29,8 @@ export default function Layout() {
     const onChangeRole = () => setUser((prev) => ({ ...prev, role: prev.role === 'admin' ? 'user' : 'admin' }));
 
     return (
-        <div className="flex p-4 h-screen font-poppins">
-            <div className={`h-[95vh] min-w-[22.375rem] flex flex-col justify-between py-[1.98rem] bg-gray/10 px-7 overflow-y-auto rounded-lg ${user?.role === 'admin' ? `absolute md:relative shadow-2xl md:shadow-none z-10 bg-white ${showNav ? 'translate-x-0' : '-translate-x-96 md:translate-x-0 '}` : ''} transition-all duration-500`}>
+        <div className="md:grid grid-cols-12 p-4 h-screen font-poppins">
+            <div className={`col-span-2 h-[95vh] flex flex-col justify-between py-[1.98rem] bg-gray/10 px-7 overflow-y-auto rounded-lg ${user?.role === 'admin' ? `absolute md:relative shadow-2xl md:shadow-none z-10 bg-white ${showNav ? 'translate-x-0' : '-translate-x-96 md:translate-x-0 '}` : ''} transition-all duration-500`}>
                 <div className="space-y-16">
                     <div className="flex items-center justify-between relative ">
                         <div className="flex items-center before:space-x-2">
@@ -71,7 +71,7 @@ export default function Layout() {
                 </button>
             </div>
 
-            <div className="w-full px-14 h-[95vh]">
+            <div className="col-span-10 w-full px-5 md:px-14 h-[95vh]">
                 <Topbar menu={user.role === 'admin' ? AdminMenu : UsrMenu} setShowNav={setShowNav} />
                 <div className="pb-5 h-[81.5vh] overflow-auto no-scrollbar">
                     <Outlet />
