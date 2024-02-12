@@ -51,7 +51,7 @@ export default function Otp({ setState }) {
                         <VerifyIn onChange={(e) => onChangeVal(e)} name="four" />
                     </div>
                     <div className="text-right">
-                        <p>you didn`t receive code? <span className="text-primary" onClick={() => setState((prev) => ({ ...prev, otp: false, forget: true }))}>Resend</span></p>
+                        <p>you didn`t receive code? <span className="text-primary cursor-pointer" onClick={() => setState((prev) => ({ ...prev, otp: false, forget: true }))}>Resend</span></p>
                     </div>
                 </form>
             </div>

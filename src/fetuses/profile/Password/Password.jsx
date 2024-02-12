@@ -15,7 +15,7 @@ export default function Password({ setState }) {
                 <input type="text" placeholder="New Password" className="py-2 w-full outline-none border-b border-gray border-opacity-50" />
                 <input type="text" placeholder="Confirm New Password" className="py-2 w-full outline-none border-b border-gray border-opacity-50" />
                 <div className="text-right">
-                    <p>Dont remember current passowrd? <span className="text-primary font-semibold" onClick={() => setState((prev) => ({ otp: true, pass: false, forget: false }))}>Send Code</span> </p>
+                    <p>Dont remember current passowrd? <span className="text-primary font-semibold cursor-pointer" onClick={() => setState((prev) => ({ otp: true, pass: false, forget: false }))}>Send Code</span> </p>
                 </div>
             </div>
             <div className="px-11 pb-5">
