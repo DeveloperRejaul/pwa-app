@@ -14,10 +14,10 @@ export default function Topbar({ menu, setShowNav = () => { } }) {
     }, [location.pathname]);
 
     return (
-        <div className="flex justify-between items-center h-[5rem]">
-            <div className="space-y-2">
-                <p className="font-semibold text-2xl">{title || 'Unknown'}</p>
-                <p className="text-base font-normal text-gray">Farm DSS Advisor Panel</p>
+        <div className="text-[#27364E] flex justify-between items-center h-[5rem] bg-red-200">
+            <div className="space-y-3">
+                <p className="font-semibold text-[2rem]">{title || 'Unknown'}</p>
+                <p className="text-base font-normal">Farm DSS Advisor Panel</p>
             </div>
             <Menu className="inline-block md:hidden" onClick={() => setShowNav((prev) => !prev)} />
             <div className="pr-8 hidden xl:inline-block">

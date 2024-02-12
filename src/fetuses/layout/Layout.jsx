@@ -29,51 +29,55 @@ export default function Layout() {
     const onChangeRole = () => setUser((prev) => ({ ...prev, role: prev.role === 'admin' ? 'user' : 'admin' }));
 
     return (
-        <div className="md:grid grid-cols-12 p-4 h-screen font-poppins">
-            <div className={`col-span-2 h-[95vh] flex flex-col justify-between py-[1.98rem] bg-gray/10 px-7 overflow-y-auto rounded-lg ${user?.role === 'admin' ? `absolute md:relative shadow-2xl md:shadow-none z-10 bg-white ${showNav ? 'translate-x-0' : '-translate-x-96 md:translate-x-0 '}` : ''} transition-all duration-500`}>
-                <div className="space-y-16">
-                    <div className="flex items-center justify-between relative ">
-                        <div className="flex items-center before:space-x-2">
-                            <Logo className="w-16 h-11" />
-                            <p className="text-primary text-2xl font-semibold">Logoipsum</p>
+        <div className="md:grid grid-cols-12 h-screen font-poppins bg-red-500">
+            <div className="col-span-3 2xl:col-span-2  pl-5 py-[1.38rem] h-screen overflow-auto">
+                <div className={`h-full flex flex-col justify-between py-[1.98rem] bg-primary bg-opacity-10 px-7 overflow-y-auto rounded-lg ${user?.role === 'admin' ? `absolute md:relative shadow-2xl md:shadow-none z-10 ${showNav ? 'translate-x-0' : '-translate-x-96 md:translate-x-0 '}` : ''} transition-all duration-500`}>
+                    <div className="space-y-16">
+                        <div className="flex items-center justify-between relative ">
+                            <div className="flex items-center before:space-x-2">
+                                <Logo className="w-16 h-11" />
+                                <p className="text-primary text-2xl w-20 truncate xl:w-auto font-semibold">Logoipsum</p>
+                            </div>
+                            <div className="md:hidden absolute right-0  z-50 bg-secondary h-6 w-6 shadow-2xl rounded-full flex items-center justify-center border border-primary"
+                                onClick={() => setShowNav(!showNav)}>
+                                <ArrowBottom className="rotate-90" />
+                            </div>
                         </div>
-                        <div className="md:hidden absolute right-0  z-50 bg-secondary h-6 w-6 shadow-2xl rounded-full flex items-center justify-center border border-primary"
-                            onClick={() => setShowNav(!showNav)}>
-                            <ArrowBottom className="rotate-90" />
-                        </div>
-                    </div>
-                    <div className="space-y-2">
-                        {(user.role === 'admin' ? AdminMenu : UsrMenu).map((data, i) => (
-                            <NavLink key={i} className="flex font-medium text-base"
-                                to={data.path}>
-                                {({ isActive }) => (
-                                    <div className={`${isActive ? 'w-full bg-primary text-white' : ''} flex transition-all py-4 duration-200 rounded-xl px-4`}>
-                                        <div className="flex items-center space-x-4">
-                                            <data.icon className={`${isActive ? 'fill-white' : 'fill-[#B9BBBD]'} w-7 h-7`} />
-                                            <p className="whitespace-nowrap">{data.name}</p>
+                        <div className="space-y-2">
+                            {(user.role === 'admin' ? AdminMenu : UsrMenu).map((data, i) => (
+                                <NavLink key={i} className="flex font-medium text-base"
+                                    to={data.path}>
+                                    {({ isActive }) => (
+                                        <div className={`${isActive ? 'w-full bg-primary text-white' : ''} flex transition-all py-4 duration-200 rounded-xl px-4`}>
+                                            <div className="flex items-center space-x-4">
+                                                <data.icon className={`${isActive ? 'fill-white' : 'fill-[#B9BBBD]'} w-7 h-7`} />
+                                                <p className=" whitespace-nowrap tracking-wide w-20 xl:w-auto truncate">{data.name}</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                )}
+                                    )}
 
-                            </NavLink>
-                        ))}
+                                </NavLink>
+                            ))}
 
-                    </div>
-                </div>
-                <button className="flex font-medium text-base"
-                    onClick={onChangeRole}>
-                    <div className="flex transition-all py-4 duration-200 rounded-xl px-4">
-                        <div className="flex items-center space-x-4">
-                            <Logout className="w-7 h-7 fill-gray opacity-60" />
-                            <p className="whitespace-nowrap">Logout</p>
                         </div>
                     </div>
-                </button>
+                    <button className="flex font-medium text-base"
+                        onClick={onChangeRole}>
+                        <div className="flex transition-all py-4 duration-200 rounded-xl px-4">
+                            <div className="flex items-center space-x-4">
+                                <Logout className="w-7 h-7 fill-gray opacity-60" />
+                                <p className="whitespace-nowrap">Logout</p>
+                            </div>
+                        </div>
+                    </button>
+                </div>
             </div>
 
-            <div className="col-span-10 w-full px-5 md:px-14 h-[95vh]">
-                <Topbar menu={user.role === 'admin' ? AdminMenu : UsrMenu} setShowNav={setShowNav} />
-                <div className="pb-5 h-[81.5vh] overflow-auto no-scrollbar">
+            <div className="relative col-span-9 2xl:col-span-10 h-screen overflow-auto w-full">
+                <div className="absolute w-full px-5 xl:px-9">
+                    <Topbar menu={user.role === 'admin' ? AdminMenu : UsrMenu} setShowNav={setShowNav} />
+                </div>
+                <div className="p-5 xl:px-9 pt-20 overflow-auto no-scrollbar">
                     <Outlet />
                 </div>
             </div>
