@@ -5,7 +5,7 @@ import Calender from '../../components/calender/Calender';
 import Shedule from './components/Shedule';
 import AddSlot from './components/AddSlot';
 
-export default function Consultations() {
+export default function UsrConsultations() {
     const [showModal, setShowModal] = useState(false);
 
     return (

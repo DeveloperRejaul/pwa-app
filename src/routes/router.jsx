@@ -13,9 +13,9 @@ import FarmerProfile from "../fetuses/farmerProfile/FarmerProfile";
 import SunItem from "../fetuses/knowledge/subitem";
 import AllRequest from "../fetuses/allRequest/AllRequest";
 import AdvisorUser from "../fetuses/advisorUser/AdvisorUser";
-import Consultations from "../fetuses/consultations/Consultations";
 import AdvisoryUserDetails from "../fetuses/advisorUser/components/AdvisoryUserDetails";
 import Setting from "../fetuses/setting/Setting";
+import WrpConsultations from "../fetuses/consultations/WrpConsultations";
 
 export const router = createBrowserRouter([
     {
@@ -52,7 +52,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: NAV_PATH.CONSULTATIONS,
-                element: <Consultations />,
+                element: <WrpConsultations />,
             },
             {
                 path: NAV_PATH.PROFILE_DETAILS,
