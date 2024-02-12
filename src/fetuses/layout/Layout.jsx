@@ -30,7 +30,7 @@ export default function Layout() {
 
     return (
         <div className="flex p-4 h-screen font-poppins">
-            <div className={`flex flex-col justify-between py-[1.98rem] bg-gray/10 h-[95vh] w-[22.375rem] px-7 overflow-y-auto rounded-lg ${user?.role === 'admin' ? `absolute md:relative shadow-2xl md:shadow-none z-10 bg-white ${showNav ? 'translate-x-0' : '-translate-x-96 md:translate-x-0 '}` : ''} transition-all duration-500`}>
+            <div className={`h-[95vh] min-w-[22.375rem] flex flex-col justify-between py-[1.98rem] bg-gray/10 px-7 overflow-y-auto rounded-lg ${user?.role === 'admin' ? `absolute md:relative shadow-2xl md:shadow-none z-10 bg-white ${showNav ? 'translate-x-0' : '-translate-x-96 md:translate-x-0 '}` : ''} transition-all duration-500`}>
                 <div className="space-y-16">
                     <div className="flex items-center justify-between relative ">
                         <div className="flex items-center before:space-x-2">
