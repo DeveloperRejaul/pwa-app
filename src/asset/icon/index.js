@@ -21,6 +21,8 @@ import {ReactComponent as User} from './User.svg'
 import {ReactComponent as Clock} from './Clock.svg'
 import {ReactComponent as World} from './World.svg'
 import {ReactComponent as Menu} from './Menu.svg'
+import {ReactComponent as Edit} from './Edit.svg'
+import {ReactComponent as Delete} from './Delete.svg'
+import {ReactComponent as BothArrow} from './BothArrow.svg'
 
-
-export {Arrow,Filter,Search,Menu, ArrowBottom,HomeIcon,ProfileIcon,AssignedIcon,NewAssignedIcon,KnowledgeIcon,ArrowForward,ArrowRight,DownloadedIcon,Logo,Logout,Check,MessageIcon,GroupUser,User,Clock,World}
+export {Arrow,Filter,Search,Menu, ArrowBottom,HomeIcon,ProfileIcon,AssignedIcon,NewAssignedIcon,KnowledgeIcon,ArrowForward,ArrowRight,DownloadedIcon,Logo,Logout,Check,MessageIcon,GroupUser,User,Clock,World,Edit,Delete,BothArrow};
