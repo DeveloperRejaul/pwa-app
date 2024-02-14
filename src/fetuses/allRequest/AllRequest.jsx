@@ -4,7 +4,7 @@ import { ArrowBottom } from '../../asset/icon'
 
 export default function AllRequest() {
     return (
-        <div className="pb-20 xl:mx-0">
+        <div className="pb-20">
             <div className="flex justify-between items-center pb-[1.88rem]">
                 <div className="space-y-2">
                     <h2 className="text-2xl font-medium leading-9">All Request</h2>

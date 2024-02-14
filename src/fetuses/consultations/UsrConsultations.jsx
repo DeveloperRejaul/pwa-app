@@ -9,7 +9,7 @@ export default function UserConsultations() {
     const [showModal, setShowModal] = useState(false);
 
     return (
-        <div className="py-20 mx-10 xl:mx-0 flex space-x-6">
+        <div className="py-20 flex space-x-6">
             <div className="w-full">
                 <div className="flex justify-between">
                     <h2 className="text-2xl font-medium">January 2023</h2>

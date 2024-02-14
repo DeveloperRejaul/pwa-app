@@ -22,6 +22,21 @@ const AdminMenu = [
     { name: "Advisor User", path: NAV_PATH.ADVISORY, icon: GroupUser },
     { name: "Setting", path: NAV_PATH.SETTING, icon: ProfileIcon },
 ]
+const ExtMenu = [
+    { name: "Home", path: NAV_PATH.HOME, icon: HomeIcon },
+    { name: "Knowledge Bank", path: NAV_PATH.KNOWLEDGE_BANK, icon: MessageIcon },
+    { name: "Sub Advisor", path: NAV_PATH.ASSIGNED, icon: AssignedIcon },
+    { name: "Farmer", path: NAV_PATH.CONSULTATIONS, icon: NewAssignedIcon },
+    { name: "Buyer", path: NAV_PATH.KNOWLEDGE, icon: KnowledgeIcon },
+    { name: "Service Provider", path: NAV_PATH.ADVISORY, icon: GroupUser },
+    { name: "Expert Advisory", path: NAV_PATH.SETTING, icon: ProfileIcon },
+]
+const usrRole = {
+    "admin": AdminMenu,
+    "user": UsrMenu,
+    "other": ExtMenu
+}
+
 export default function Layout() {
     const { user, setUser } = useAppContext();
     const [showNav, setShowNav] = useState(false);
@@ -30,11 +45,14 @@ export default function Layout() {
 
     return (
         <div className="md:grid grid-cols-12 h-screen font-poppins">
-            <div className="col-span-3 2xl:col-span-2  pl-5 py-[1.38rem] h-screen overflow-auto">
-                <div className={`h-full flex flex-col justify-between py-[1.98rem] bg-primary bg-opacity-10 px-7 overflow-y-auto rounded-lg ${user?.role === 'admin' ? `absolute md:relative shadow-2xl md:shadow-none z-10 ${showNav ? 'translate-x-0' : '-translate-x-96 md:translate-x-0 '}` : ''} transition-all duration-500`}>
+            <div className={`col-span-3 pl-5 py-[1.38rem] h-screen overflow-y-auto 
+            bg-secondary md:bg-transparent transition-all duration-500
+            ${user?.role === 'admin' ? `absolute md:relative shadow-2xl md:shadow-none z-50 ${showNav ? 'translate-x-0' : '-translate-x-96 md:translate-x-0 '}` : ''}
+            `}>
+                <div className={`h-full flex flex-col justify-between py-[1.98rem] bg-primary bg-opacity-10 px-7 overflow-y-auto rounded-lg`}>
                     <div className="space-y-16">
                         <div className="flex items-center justify-between relative ">
-                            <div className="flex items-center before:space-x-2">
+                            <div className="flex items-center before:space-x-2" onClick={() => setUser((u) => ({ ...u, role: 'other' }))}>
                                 <Logo className="w-16 h-11" />
                                 <p className="text-primary text-2xl w-20 truncate xl:w-auto font-semibold">Logoipsum</p>
                             </div>
@@ -44,7 +62,7 @@ export default function Layout() {
                             </div>
                         </div>
                         <div className="space-y-2">
-                            {(user.role === 'admin' ? AdminMenu : UsrMenu).map((data, i) => (
+                            {usrRole[user?.role || 'user'].map((data, i) => (
                                 <NavLink key={i} className="flex font-medium text-base"
                                     to={data.path}>
                                     {({ isActive }) => (
@@ -73,7 +91,7 @@ export default function Layout() {
                 </div>
             </div>
 
-            <div className="col-span-9 2xl:col-span-10 h-screen  w-full overflow-auto">
+            <div className="col-span-9 h-screen  w-full overflow-auto">
                 <div className="top-0 sticky w-full px-5 xl:px-9 z-10">
                     <Topbar menu={user?.role === 'admin' ? AdminMenu : UsrMenu} setShowNav={setShowNav} />
                 </div>

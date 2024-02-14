@@ -10,7 +10,10 @@ export default function Topbar({ menu, setShowNav = () => { } }) {
     useEffect(() => {
         const fd = menu.find((m) => m?.path === pathname);
         if (fd) setTitle(fd?.name);
-        else setTitle(pathname.replace('/', ''));
+        else {
+            if (location?.state?.name) setTitle(location?.state?.name)
+            else setTitle(pathname.replace('/', ''));
+        }
     }, [location.pathname]);
 
     return (

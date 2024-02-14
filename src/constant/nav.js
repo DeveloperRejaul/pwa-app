@@ -12,5 +12,6 @@ export const NAV_PATH = {
     CHAT: '/chat',
     KNOWLEDGE_DETAILS:'/knowledge-details',
     CONSULTATIONS:'/consultations',
-    FARMER_PROFILE: "/farmer-profile"
+    FARMER_PROFILE: "/farmer-profile",
+    KNOWLEDGE_BANK: "/knowledge-bank"
 }

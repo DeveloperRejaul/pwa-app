@@ -68,14 +68,14 @@ const KnowledgeDetails = () => {
         // Direct props for inner video tag (mdn.io/video)
     }
     return (
-        <div className='relative overflow-x-hidden container mx-auto pt-11'>
-            <div className="h-[30vh] w-full relative">
-                <img className='h-full w-full' src={'https://images.nationalgeographic.org/image/upload/t_edhub_resource_key_image/v1638892233/EducationHub/photos/crops-growing-in-thailand.jpg'} alt="" />
-                <div className="absolute top-10 px-4">
+        <div className='relative overflow-x-hidden container mx-auto'>
+            <div className="h-[43rem] w-full rounded-xl overflow-hidden">
+                <img className='h-full w-full object-cover' src={'https://images.nationalgeographic.org/image/upload/t_edhub_resource_key_image/v1638892233/EducationHub/photos/crops-growing-in-thailand.jpg'} alt="" />
+                {/* <div className="absolute top-10 px-4">
                     <Arrow className='cursor-pointer ' onClick={() => navigate("..", { relative: "path" })} />
-                </div>
+                </div> */}
             </div>
-            <div className="p-5">
+            <div className="py-5">
                 <div className="flex justify-between items-center">
                     <p className="font-manrope font-semibold text-xl text-headline">Lorem Ipsum Dolor</p>
                     <div className="flex items-center gap-2">
@@ -87,7 +87,7 @@ const KnowledgeDetails = () => {
                     <div className="rounded-full bg-gray h-1 w-1"></div>
                     <p className="font-manrope text-gray text-xs">10 min read</p>
                 </div>
-                <div className="flex justify-between">
+                <div className="flex">
                     <button className='px-7 pt-7 pb-2 rounded-3xl border border-border space-y-3' type="button">
                         <img className='m-auto' src={mic} alt="" />
                         <p className="text-gray font-manropetext-xs">1 Audio</p>
@@ -104,21 +104,24 @@ const KnowledgeDetails = () => {
             </div>
             <div className="px-5 pb-7">
                 <p className="title text-xl font-bold font-manrope text-headline">Lorem ipsum dolor sit amet</p>
-                <p className="text-gray font-manrope text-[17px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices lectus in pellentesque elit dui. Urna ultrices tellus varius scelerisque suspendisse pellentesque. Quam vitae vel, feugiat consequat a massa mi. Dolor a integer aliquet orci quam nibh id tortor morbi.</p>
-                <div className="w-full h-52 rounded-xl overflow-hidden my-5">
-
-                    <img className='w-full h-full' src="https://images.nationalgeographic.org/image/upload/t_edhub_resource_key_image/v1638892233/EducationHub/photos/crops-growing-in-thailand.jpg" alt="" />
+                <p className="text-gray font-manrope text-[17px]">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices lectus in pellentesque elit dui. Urna ultrices tellus varius scelerisque suspendisse pellentesque. Quam vitae vel, feugiat consequat a massa mi. Dolor a integer aliquet orci quam nibh id tortor morbi.</p>
+                <div className="w-full h-52 flex justify-center my-5">
+                    <img className="rounded-xl" src="https://images.nationalgeographic.org/image/upload/t_edhub_resource_key_image/v1638892233/EducationHub/photos/crops-growing-in-thailand.jpg" alt="img1" />
                 </div>
                 <p className="title text-xl font-bold font-manrope text-headline">Quam vitae vel, feugiat consequat a massa mi</p>
                 <p className="text-gray font-manrope text-[17px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices lectus in pellentesque elit dui. Urna ultrices tellus varius scelerisque suspendisse pellentesque. Quam vitae vel, feugiat consequat a massa mi. Dolor a integer aliquet orci quam nibh id tortor morbi.</p>
-                <div className="w-full h-52 rounded-xl overflow-hidden my-5 relative">
-                    <Plyr {...plyrProps} />
+                <div className="w-full h-52 flex items-center justify-center ">
+                    {/* <Plyr {...plyrProps} /> */}
                     {/* <button onClick={() => { }} className='absolute top-[45%] left-[45%]' type="button">
                         play
                     </button>
                     <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" autoPlay={true}></video> */}
+                    <video className=" object-contain h-52 rounded-xl" controls>
+                        <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
+                    </video>
                 </div>
-                <p className="title text-xl font-bold font-manrope text-headline">Quam vitae vel, feugiat consequat a massa mi</p>
+                <p className="title text-xl font-bold font-manrope text-headline pt-4">Quam vitae vel, feugiat consequat a massa mi</p>
                 <p className="text-gray font-manrope text-[17px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices lectus in pellentesque elit dui. Urna ultrices tellus varius scelerisque suspendisse pellentesque. Quam vitae vel, feugiat consequat a massa mi. Dolor a integer aliquet orci quam nibh id tortor morbi.</p>
             </div>
             <div className="bg-gray h-[1px] w-auto m-5 "></div>

@@ -4,7 +4,7 @@ import TblAssigned from './TblAssigned'
 
 export default function AssignDsk() {
     return (
-        <div className="hidden md:block mx-10 xl:mx-0 pb-20">
+        <div className="hidden md:block pb-20">
             <div className="flex justify-between items-center pb-12">
                 <div className="space-x-14 font-medium ">
                     <button className="text-2xl underline underline-offset-8">All Assigned</button>

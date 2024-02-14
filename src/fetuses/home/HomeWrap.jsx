@@ -7,7 +7,7 @@ import fetchData from '../../db/AllRequest.json';
 
 export default function HomeWrap() {
     return (
-        <div className="px-10 xl:px-0 pb-10 w-full">
+        <div className="pb-10 w-full">
             <div className="grid grid-cols-6 gap-8">
                 <div className="h-full col-span-6 space-y-10 xl:col-span-4 flex flex-col">
                     <div className="flex space-x-7 justify-between">

@@ -16,6 +16,7 @@ import AdvisorUser from "../fetuses/advisorUser/AdvisorUser";
 import AdvisoryUserDetails from "../fetuses/advisorUser/components/AdvisoryUserDetails";
 import Setting from "../fetuses/setting/Setting";
 import WrpConsultations from "../fetuses/consultations/WrpConsultations";
+import KnowlegeBank from "../fetuses/knowledgeBank/KnowlegeBank";
 
 export const router = createBrowserRouter([
     {
@@ -81,6 +82,10 @@ export const router = createBrowserRouter([
             {
                 path: NAV_PATH.SETTING,
                 element: <Setting />
+            },
+            {
+                path: NAV_PATH.KNOWLEDGE_BANK,
+                element: <KnowlegeBank />
             },
         ]
     },
