@@ -1,5 +1,6 @@
 import React from 'react';
 import TblKnowledgeBank from './TblKnowledgeBank';
+import CusDropdown from '../../components/dropdown/CusDropdown';
 
 export default function KnowlegeBank() {
     return (
@@ -28,6 +29,7 @@ export default function KnowlegeBank() {
                 </div>
             </div>
             <div>
+                <CusDropdown />
                 <TblKnowledgeBank />
             </div>
         </div>
