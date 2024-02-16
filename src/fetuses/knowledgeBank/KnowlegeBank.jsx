@@ -2,6 +2,7 @@ import React from 'react';
 import TblKnowledgeBank from './TblKnowledgeBank';
 import CusDropdown from '../../components/dropdown/CusDropdown';
 import Button from '../../components/button/Button';
+import AddCtlMeasure from './AddCtlMeasure';
 
 export default function KnowlegeBank() {
     return (
@@ -29,6 +30,7 @@ export default function KnowlegeBank() {
                     <button className="border border-primary text-primary text-[1.186rem] font-medium px-[0.88rem] py-[1.186rem] rounded-[.449rem]">Download Sample Excel</button>
                 </div>
             </div>
+            <AddCtlMeasure />
             <div>
                 <h2 className="pt-12 pb-7 font-semibold text-[1.75rem]">Control Measure</h2>
                 <div className="flex justify-between items-center py-[1.13rem]">

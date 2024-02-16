@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 
-export default function Modal({ children, setState = () => { } }) {
+export default function Modal({ children, setState = () => { }, size = false }) {
     const refModal = useRef();
 
     const onClose = (e) => {
@@ -20,7 +20,7 @@ export default function Modal({ children, setState = () => { } }) {
                     role="contentinfo"
                     onKeyDown={() => { }}
                 >
-                    <div ref={refModal} className="relative transform rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
+                    <div ref={refModal} className={`elative transform rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full ${size ? 'sm:max-w-[80%]' : 'sm:max-w-lg'}`}>
                         {children}
                     </div>
                 </div>
