@@ -13,5 +13,6 @@ export const NAV_PATH = {
     KNOWLEDGE_DETAILS:'/knowledge-details',
     CONSULTATIONS:'/consultations',
     FARMER_PROFILE: "/farmer-profile",
-    KNOWLEDGE_BANK: "/knowledge-bank"
+    KNOWLEDGE_BANK: "/knowledge-bank",
+    EXPORT_ADVISORY: "/export-advisory"
 }

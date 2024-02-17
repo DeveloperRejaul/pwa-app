@@ -29,7 +29,7 @@ const ExtMenu = [
     { name: "Farmer", path: NAV_PATH.CONSULTATIONS, icon: NewAssignedIcon },
     { name: "Buyer", path: NAV_PATH.KNOWLEDGE, icon: KnowledgeIcon },
     { name: "Service Provider", path: NAV_PATH.ADVISORY, icon: GroupUser },
-    { name: "Expert Advisory", path: NAV_PATH.SETTING, icon: ProfileIcon },
+    { name: "Expert Advisory", path: NAV_PATH.EXPORT_ADVISORY, icon: ProfileIcon },
 ]
 const usrRole = {
     "admin": AdminMenu,

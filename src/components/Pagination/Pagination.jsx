@@ -4,7 +4,8 @@ import { ArrowBottom } from '../../asset/icon';
 
 export default function Pagination({ pageRangeDisplayed = 5, totalCount = 10, onPageChange = () => { } }) {
     return (
-        <div>
+        <div className="flex items-center justify-between">
+            <p className="text-[1.185rem] text-paragraph whitespace-nowrap hidden xl:inline-block">Showing 1 to 10 of 786 entries</p>
             <ReactPaginate
                 breakLabel="..."
                 previousLabel={
@@ -21,7 +22,7 @@ export default function Pagination({ pageRangeDisplayed = 5, totalCount = 10, on
                 pageRangeDisplayed={pageRangeDisplayed}
                 pageCount={totalCount}
                 renderOnZeroPageCount={null}
-                containerClassName="flex items-center h-16 justify-end w-full overflow-auto"
+                containerClassName="flex items-center h-16 justify-end w-full "
                 breakLinkClassName="p-[1.2rem] border border-l-0 border-r-0 border-primary border-opacity-40"
                 activeClassName="bg-primary text-secondary"
                 pageClassName="border border-primary border-opacity-40 h-full w-14 flex items-center justify-center text-xl font-normal text-headline"
