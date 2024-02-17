@@ -1,11 +1,11 @@
 import React, { useRef } from 'react'
 
-export default function Modal({ children, setState = () => { }, size = false }) {
+export default function Modal({ children, setState = () => { }, size = false, onClose = () => { } }) {
     const refModal = useRef();
 
-    const onClose = (e) => {
+    const onClosing = (e) => {
         if (refModal?.current?.contains && !refModal.current.contains(e.target)) {
-            setState({ forget: false, pass: false, otp: false });
+            onClose();
         }
     }
     return (
@@ -16,7 +16,7 @@ export default function Modal({ children, setState = () => { }, size = false }) 
             <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
                 <div
                     className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0"
-                    onClick={onClose}
+                    onClick={onClosing}
                     role="contentinfo"
                     onKeyDown={() => { }}
                 >

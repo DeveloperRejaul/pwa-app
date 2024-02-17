@@ -13,7 +13,7 @@ function VerifyIn({ onChange, name }) {
         <input type="text" onChange={onChange} name={name} required onInvalid={(e) => onInvalid(e)} maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" className="otpInput w-[3.664rem] h-[3.25rem] p-2.5 text-cMd text-subInfo text-center rounded-lg border border-secondary border-opacity-50 focus:shadow-sm focus:shadow-secondary outline-none selection:bg-transparent " />
     );
 }
-export default function Otp({ setState }) {
+export default function Otp({ setState, onClose }) {
     const { handleSubmit } = useForm();
     const [otp, setOtp] = useState({
         one: null,
@@ -37,7 +37,7 @@ export default function Otp({ setState }) {
         setOtp({ ...otp, [e.target.name]: e.target.value });
     };
     return (
-        <Modal setState={setState}>
+        <Modal setState={setState} onClose={onClose}>
             <div className="pt-11 px-11 space-y-2">
                 <h2 className=" text-2xl font-bold text-gray">Enter the verification code</h2>
                 <p className="text-sm">We have sent a verification code to the email address you provided.</p>

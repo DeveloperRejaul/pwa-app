@@ -18,6 +18,7 @@ import Setting from "../fetuses/setting/Setting";
 import WrpConsultations from "../fetuses/consultations/WrpConsultations";
 import KnowlegeBank from "../fetuses/knowledgeBank/KnowlegeBank";
 import ExportAdvisory from "../fetuses/ExportAdvisory/ExportAdvisory";
+import Buyer from "../fetuses/Buyer/Buyer";
 
 export const router = createBrowserRouter([
     {
@@ -91,6 +92,10 @@ export const router = createBrowserRouter([
             {
                 path: NAV_PATH.EXPORT_ADVISORY,
                 element: <ExportAdvisory />
+            },
+            {
+                path: NAV_PATH.BUYER,
+                element: <Buyer />
             },
         ]
     },

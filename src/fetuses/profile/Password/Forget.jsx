@@ -2,9 +2,9 @@ import React from 'react'
 import Modal from '../../../components/modal/Modal'
 import Button from '../../../components/button/Button'
 
-export default function Forget({ setState = () => { } }) {
+export default function Forget({ setState = () => { }, onClose }) {
     return (
-        <Modal setState={setState}>
+        <Modal setState={setState} onClose={onClose}>
             <div className="pt-11 px-11 space-y-2">
                 <h2 className=" text-2xl font-bold text-gray">Change Your Password</h2>
                 <p className="text-sm">Your new password must be defferent from previous used passwords</p>

@@ -10,9 +10,9 @@ const CusInput = ({ title = "title", Field = 'input', placeholder = 'Input' }) =
 
 )
 
-export default function AddCtlMeasure() {
+export default function AddCtlMeasure({ onClose = () => { } }) {
     return (
-        <Modal size>
+        <Modal size onClose={onClose} >
             <div className="text-headline px-[4.75rem] py-[2.94rem] space-y-[3.75rem]" >
                 <h2 className="text-[1.63rem] font-semibold">Add Control Measure</h2>
                 <div className='space-y-9'>

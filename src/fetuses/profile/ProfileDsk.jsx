@@ -6,6 +6,7 @@ import Forget from './Password/Forget'
 
 export default function ProfileDsk() {
     const [show, setShow] = useState({ pass: false, otp: false, forget: false });
+    const onClose = () => setShow({ forget: false, pass: false, otp: false });
     return (
         <div className="py-20">
             <div className="flex flex-col xl:flex-row items-center xl:items-start space-y-10 xl:space-y-0 space-x-20">
@@ -16,13 +17,13 @@ export default function ProfileDsk() {
                         <p className="text-2xl font-medium ">Advisor Lorem Name</p>
                         <Button className="h-16" text="Edit Data" />
                         {show.pass && (
-                            <Password setState={setShow} />
+                            <Password setState={setShow} onClose={onClose} />
                         )}
                         {show.otp && (
-                            <Otp setState={setShow} />
+                            <Otp setState={setShow} onClose={onClose} />
                         )}
                         {show.forget && (
-                            <Forget setState={setShow} />
+                            <Forget setState={setShow} onClose={onClose} />
                         )}
                     </div>
                 </div>

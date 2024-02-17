@@ -27,7 +27,7 @@ const ExtMenu = [
     { name: "Knowledge Bank", path: NAV_PATH.KNOWLEDGE_BANK, icon: MessageIcon },
     { name: "Sub Advisor", path: NAV_PATH.ASSIGNED, icon: AssignedIcon },
     { name: "Farmer", path: NAV_PATH.CONSULTATIONS, icon: NewAssignedIcon },
-    { name: "Buyer", path: NAV_PATH.KNOWLEDGE, icon: KnowledgeIcon },
+    { name: "Buyer", path: NAV_PATH.BUYER, icon: KnowledgeIcon },
     { name: "Service Provider", path: NAV_PATH.ADVISORY, icon: GroupUser },
     { name: "Expert Advisory", path: NAV_PATH.EXPORT_ADVISORY, icon: ProfileIcon },
 ]
