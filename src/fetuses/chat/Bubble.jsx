@@ -24,11 +24,11 @@ const Bubble = ({ data = {} }) => {
     } else {
         return (
             <div className="relative">
-                <div className='bg-light px-3 font-manrope  ml-auto  text-headline w-fit max-w-[60vw] rounded-[10px] pt-3'>
+                <div className='bg-light px-3 mr-2 font-manrope  ml-auto  text-headline w-fit max-w-[60vw] rounded-[10px] pt-3'>
                     <p className=" text-sm font-medium  leading-5">{data.text || ""}</p>
                     <p className="text-[10px] text-end py-1">{data.time || ""}</p>
                 </div>
-                <img className='absolute -bottom-[6px] -right-[6px] ' src={chatCorner1} />
+                <img className='absolute -bottom-[6px] -right-[0px]' src={chatCorner1} />
             </div>
         );
     }

@@ -38,7 +38,7 @@ export default Knowledge
 
 function Container({ children }) {
   return (
-    <div className=' h-screen overflow-hidden'>
+    <div className='px-5 md:px-0 h-screen overflow-hidden'>
       <div className='space-y-4 h-screen overflow-hidden'>
         {/* <Input /> */}
         <div className='h-[90vh] overflow-y-scroll space-y-6 pb-40 no-scrollbar' >

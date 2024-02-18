@@ -90,12 +90,11 @@ export default function Layout() {
                     </button>
                 </div>
             </div>
-
             <div className="col-span-9 h-screen  w-full overflow-auto">
-                <div className="top-0 sticky w-full px-5 xl:px-9 z-10">
+                <div className="h-[17vh] top-0 sticky w-full px-5 xl:px-9 z-10">
                     <Topbar menu={user?.role === 'admin' ? AdminMenu : UsrMenu} setShowNav={setShowNav} />
                 </div>
-                <div className="p-5 xl:px-9 pt-[3.25rem] overflow-auto no-scrollbar font-poppins ">
+                <div className="p-5 xl:px-9 pt-[3.25rem] overflow-auto no-scrollbar font-poppins h-[83vh]">
                     <Outlet />
                 </div>
             </div>

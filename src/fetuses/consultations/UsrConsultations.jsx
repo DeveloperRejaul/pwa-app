@@ -9,7 +9,7 @@ export default function UserConsultations() {
     const [showModal, setShowModal] = useState(false);
 
     return (
-        <div className="py-20 flex space-x-6">
+        <div className="px-5 md:px-0 md:flex md:space-x-6">
             <div className="w-full">
                 <div className="flex justify-between">
                     <h2 className="text-2xl font-medium">January 2023</h2>
@@ -32,7 +32,7 @@ export default function UserConsultations() {
                     <Shedule />
                 </div>
             </div>
-            <div className="hidden md:block  font-In space-y-10 ">
+            <div className="block  font-In space-y-10 ">
                 <div className="px-5 py-9 bg-primary bg-opacity-15 space-y-4 rounded-2xl">
                     <div className="space-x-4 flex items-center text-base font-medium leading-4">
                         <User />

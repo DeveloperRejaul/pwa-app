@@ -51,15 +51,17 @@ const Chat = () => {
         }
     };
     useEffect(() => {
-        bottomRef.current.scrollIntoView({
+        bottomRef?.current?.scrollIntoView({
             behavior: 'smooth',
             block: 'end'
         })
     }, [chats]);
     return (
-        <div className='px-5 py-11 h-screen relative w-full flex flex-col justify-between'>
-            <Header data={{ name: ' Plot Name - Advisory', status: 'Online', image: profile }} />
-            <div className="space-y-7 overflow-y-auto w-full px-2 h-full   no-scrollbar">
+        <div className='px-5 md:px-0 w-full  h-full flex flex-col'>
+            <div className="">
+                <Header data={{ name: ' Plot Name - Advisory', status: 'Online', image: profile }} />
+            </div>
+            <div className=" flex-1 space-y-7 overflow-y-auto">
                 <div className='bg-[#C8996333] w-[5.44rem] mx-auto rounded-full p-[6px] text-center text-headline text-[8px]'>
                     <p className="">21 Mar 2023</p>
                 </div>
