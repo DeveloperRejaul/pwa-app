@@ -65,24 +65,13 @@ export default function Calender({ apiData }) {
 
       return new Date(d.created).toDateString() === day;
     })
-    // console.log({ dt: dt?.created, day });
     if (dt) return true;
     else false;
   }
-  // const todayDate = ({ day, date }) => {
-  //   // if (day) {
-  //   //   const dayNum = new Date(date).getDay();
-  //   //   weekdays[dayNum];
-  //   // }
-  //   const nowDate = new Date().getDate();
-  //   const dt = new Date(date).getDate();
-  //   console.log({ nowDate, dt });
-  //   if (dt === nowDate) return true;
-  //   return false;
-  // }
+
   return (
     <div
-      className="border border-primary rounded-lg px-9 py-6 border-opacity-45"
+      className="min-w-[22rem] min-h-96 border border-primary rounded-lg px-9 py-6 border-opacity-45"
     >
       <div
         className="flex justify-between items-center px-2 py-4"

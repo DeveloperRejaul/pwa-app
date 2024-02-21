@@ -47,7 +47,10 @@ export default function KnowlegeBank() {
                         <button className="border border-primary text-primary text-[1.186rem] font-medium px-[0.88rem] py-[1.186rem] rounded-[.449rem]">Update Excel</button>
                     </div>
                 </div>
-                <TblKnowledgeBank />
+                <div className="overflow-auto">
+                    <TblKnowledgeBank />
+                </div>
+
             </div>
         </div>
     )

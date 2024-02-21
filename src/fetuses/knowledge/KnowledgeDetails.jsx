@@ -87,7 +87,7 @@ const KnowledgeDetails = () => {
                     <div className="rounded-full bg-gray h-1 w-1"></div>
                     <p className="font-manrope text-gray text-xs">10 min read</p>
                 </div>
-                <div className="flex">
+                <div className="flex space-x-14">
                     <button className='px-7 pt-7 pb-2 rounded-3xl border border-border space-y-3' type="button">
                         <img className='m-auto' src={mic} alt="" />
                         <p className="text-gray font-manropetext-xs">1 Audio</p>

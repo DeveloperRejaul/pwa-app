@@ -44,12 +44,12 @@ export default function Layout() {
     const onChangeRole = () => setUser((prev) => ({ ...prev, role: prev.role === 'admin' ? 'user' : 'admin' }));
 
     return (
-        <div className="md:grid grid-cols-12 h-screen font-poppins">
-            <div className={`col-span-3 pl-5 py-[1.38rem] h-screen overflow-y-auto 
-            bg-secondary md:bg-transparent transition-all duration-500
+        <div className="md:flex h-screen font-poppins">
+            <div className={`pl-5 py-[1.38rem] h-screen overflow-y-auto 
+            bg-light md:bg-transparent transition-all duration-500
             ${user?.role === 'admin' ? `absolute md:relative shadow-2xl md:shadow-none z-50 ${showNav ? 'translate-x-0' : '-translate-x-96 md:translate-x-0 '}` : ''}
             `}>
-                <div className={`h-full flex flex-col justify-between py-[1.98rem] bg-primary bg-opacity-10 px-7 overflow-y-auto rounded-lg`}>
+                <div className={`h-full  max-w-[20rem] flex flex-col justify-between py-[1.98rem] md:bg-gray md:bg-opacity-10 px-7 overflow-y-auto rounded-3xl`}>
                     <div className="space-y-16">
                         <div className="flex items-center justify-between relative ">
                             <div className="flex items-center before:space-x-2" onClick={() => setUser((u) => ({ ...u, role: 'other' }))}>
@@ -69,14 +69,13 @@ export default function Layout() {
                                         <div className={`${isActive ? 'w-full bg-primary text-white' : ''} flex transition-all py-4 duration-200 rounded-xl px-4`}>
                                             <div className="flex items-center space-x-4">
                                                 <data.icon className={`${isActive ? 'fill-white' : 'fill-[#B9BBBD]'} w-7 h-7`} />
-                                                <p className=" whitespace-nowrap tracking-wide w-20 xl:w-auto truncate">{data.name}</p>
+                                                <p className=" whitespace-nowrap tracking-wide md:w-20 xl:w-auto truncate">{data.name}</p>
                                             </div>
                                         </div>
                                     )}
 
                                 </NavLink>
                             ))}
-
                         </div>
                     </div>
                     <button className="flex font-medium text-base"
@@ -90,8 +89,8 @@ export default function Layout() {
                     </button>
                 </div>
             </div>
-            <div className="col-span-9 h-screen  w-full overflow-auto">
-                <div className="h-[17vh] top-0 sticky w-full px-5 xl:px-9 z-10">
+            <div className="container mx-auto flex-1 h-screen  w-full overflow-auto">
+                <div className="top-0 sticky w-full px-5 xl:px-9 z-10">
                     <Topbar menu={user?.role === 'admin' ? AdminMenu : UsrMenu} setShowNav={setShowNav} />
                 </div>
                 <div className="p-5 xl:px-9 pt-[3.25rem] overflow-auto no-scrollbar font-poppins h-[83vh]">

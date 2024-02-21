@@ -24,7 +24,7 @@ export default function Topbar({ menu, setShowNav = () => { } }) {
             </div>
             <Menu className="inline-block md:hidden" onClick={() => setShowNav((prev) => !prev)} />
             <div className="pr-8 hidden xl:inline-block">
-                <div className="flex items-center bg-primary/10 rounded-md h-10 overflow-hidden xl:px-4">
+                <div className="flex items-center bg-primary/10 rounded-md h-14 overflow-hidden xl:px-4">
                     <input type="text" placeholder="Search" className="border-none outline-none text-gray bg-transparent w-auto" />
                     <Search />
                 </div>

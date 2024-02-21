@@ -25,7 +25,7 @@ export default function TblConsultations() {
             <thead className="">
                 <tr className="text-left bg-[#F8F8F8]">
                     <th className="py-[1.813rem]">
-                        <div className="flex justify-center h-full py-[1.813rem] px-3  border-l-[0.438rem]  border-transparent">
+                        <div className="flex justify-center h-full px-3  border-l-[0.438rem]  border-transparent">
                             <CheckBox />
                         </div>
                     </th>

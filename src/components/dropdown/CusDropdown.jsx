@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { ArrowBottom } from '../../asset/icon';
 
-export default function CusDropdown({ DefaultVal = "Select" }) {
+const DefaultOpts = [{ id: 1, name: 'Option 1' }, { id: 2, name: 'Option 2' }, { id: 3, name: 'Option 3' }, { id: 4, name: 'Option 4' }];
+export default function CusDropdown({ DefaultVal = "Select", Opts = DefaultOpts }) {
     const refDropdown = useRef();
     const [selectOpt, setSelectOpt] = useState(DefaultVal);
 
@@ -43,14 +44,14 @@ export default function CusDropdown({ DefaultVal = "Select" }) {
                 <ArrowBottom />
             </button>
             <div
-                className="customStyleDropdown hidden flex flex-col absolute bg-white w-full text-sm border border-primary border-opacity-50 border-t-0 shadow-md rounded-b-md"
+                className="customStyleDropdown z-10 hidden flex flex-col absolute bg-white w-full text-sm border border-primary border-opacity-50 border-t-0 shadow-md rounded-b-md "
             >
-                {[1, 2, 3, 4, 5].map((d) => (
+                {Opts.map((d, i) => (
                     <button
-                        key={d}
-                        className="text-left px-2 py-1 hover:bg-secondary hover:text-txtPrimary rounded-sm whitespace-nowrap"
-                        onClick={() => onSelect('select' + d)}>
-                        Options 1
+                        key={i}
+                        className=" px-2 py-1 hover:bg-secondary hover:text-txtPrimary rounded-sm whitespace-nowrap text-left text-gray hover:text-black"
+                        onClick={() => onSelect(d.name)}>
+                        {d.name}
                     </button>
                 ))}
             </div>

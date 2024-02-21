@@ -1,19 +1,31 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { ArrowBottom, Clock, User, World } from '../../asset/icon';
 import Button from '../../components/button/Button';
 import Calender from '../../components/calender/Calender';
 import Shedule from './components/Shedule';
 import AddSlot from './components/AddSlot';
 
+// Not used Components
 export default function UserConsultations() {
     const [showModal, setShowModal] = useState(false);
+    const addSlotRef = useRef();
 
+    useEffect(() => {
+        const outsideClick = (e) => {
+            console.log('hit');
+            if (addSlotRef.current && !addSlotRef.current.contains(e.target)) {
+                setShowModal(false)
+            }
+        }
+        document.addEventListener('mousedown', outsideClick);
+        return () => document.removeEventListener('keydown', outsideClick);
+    }, []);
     return (
         <div className="py-20 mx-10 xl:mx-0 flex space-x-6">
             <div className="w-full">
                 <div className="flex justify-between">
                     <h2 className="text-2xl font-medium">January 2023</h2>
-                    <div className="relative flex space-x-4">
+                    <div ref={addSlotRef} className="relative flex space-x-4 bg-red-500">
                         <button className="bg-primary bg-opacity-30 text-primary w-20 text-xs font-medium rounded-lg py-2" onClick={() => setShowModal(!showModal)}>Add Slot</button>
                         {showModal ? (
                             <div className="absolute right-28 top-9">

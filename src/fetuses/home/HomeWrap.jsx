@@ -19,7 +19,7 @@ export default function HomeWrap() {
                         <ChartWrap />
                     </div>
                 </div>
-                <div className="h-full col-span-6 pt-10 xl:pt-0 xl:col-span-2 flex flex-col justify-between">
+                <div className="h-full col-span-6 pt-10 xl:pt-0 space-y-10 xl:space-y-0 xl:col-span-2 flex flex-col justify-between">
                     <ChatList />
                     <Calender apiData={fetchData} />
                 </div>

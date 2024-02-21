@@ -20,7 +20,7 @@ export default function Modal({ children, setState = () => { }, size = false, on
                     role="contentinfo"
                     onKeyDown={() => { }}
                 >
-                    <div ref={refModal} className={`elative transform rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full ${size ? 'sm:max-w-[80%]' : 'sm:max-w-lg'}`}>
+                    <div ref={refModal} className={`max-h-[90vh] overflow-auto no-scrollbar relative transform rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full ${size ? 'sm:max-w-[80%]' : 'sm:max-w-lg'}`}>
                         {children}
                     </div>
                 </div>

@@ -26,7 +26,7 @@ function SunItem() {
                                             <img src={location?.state?.img} alt="" className='w-full h-full' />
                                         </div>
                                     </div>
-                                    <p className='text-paragraph tracking-[0.024rem] text-[1.19rem]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
+                                    <p className='text-paragraph tracking-[0.024rem] text-[1.19rem] truncate'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
                                 </div>
                             </div>
                             <ArrowForward className='fill-primary text-6xl cursor-pointer' onClick={() => navigate(NAV_PATH.KNOWLEDGE_DETAILS, { state: { name: 'Carrot' } })} />
