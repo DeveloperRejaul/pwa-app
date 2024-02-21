@@ -8,11 +8,18 @@ export default function Topbar({ menu, setShowNav = () => { } }) {
     const [title, setTitle] = useState();
 
     useEffect(() => {
+        console.log(location);
         const fd = menu.find((m) => m?.path === pathname);
-        if (fd) setTitle(fd?.name);
+        if (fd) {
+            const newT = fd?.name.replace(/-/g, "");
+            setTitle(newT);
+        }
         else {
             if (location?.state?.name) setTitle(location?.state?.name)
-            else setTitle(pathname.replace('/', ''));
+            else {
+                const t = pathname.replace('/', '');
+                setTitle(t?.replace(/-/g, ' '));
+            }
         }
     }, [location.pathname]);
 

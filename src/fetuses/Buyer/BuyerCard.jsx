@@ -1,7 +1,6 @@
 import React from 'react';
 
 export default function BuyerCard({ data }) {
-    console.log(data);
     return (
         <div className='max-w-[21.5rem] shrink-0 shadow-sm'>
             <div className="rounded-lg overflow-hidden border-b border-l border border-gray border-opacity-20  p-5">
