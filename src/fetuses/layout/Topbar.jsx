@@ -8,25 +8,25 @@ export default function Topbar({ menu, setShowNav = () => { } }) {
     const [title, setTitle] = useState();
 
     useEffect(() => {
-        console.log(location);
-        const fd = menu.find((m) => m?.path === pathname);
-        if (fd) {
-            const newT = fd?.name.replace(/-/g, "");
-            setTitle(newT);
-        }
+        // console.log(location);
+        // const fd = menu.find((m) => m?.path === pathname);
+        // if (fd) {
+        //     const newT = fd?.name.replace(/-/g, "");
+        //     setTitle(newT);
+        // }
+        // else {
+        if (location?.state?.name) setTitle(location?.state?.name)
         else {
-            if (location?.state?.name) setTitle(location?.state?.name)
-            else {
-                const t = pathname.replace('/', '');
-                setTitle(t?.replace(/-/g, ' '));
-            }
+            const t = pathname.replace('/', '');
+            setTitle(t?.replace(/-/g, ' '));
         }
+        // }
     }, [location.pathname]);
 
     return (
         <div className="text-[#27364E] bg-white flex justify-between items-center pt-9">
             <div className="space-y-3">
-                <p className="font-semibold text-[2rem] capitalize">{title || 'Unknown'}</p>
+                <p className="font-semibold text-[2rem] capitalize">{title || 'Home'}</p>
                 <p className="text-base font-normal">Farm DSS Advisor Panel</p>
             </div>
             <Menu className="inline-block md:hidden" onClick={() => setShowNav((prev) => !prev)} />

@@ -5,7 +5,7 @@ export const NAV_PATH = {
     PROFILE_DETAILS: '/profile-details',
     ASSIGNED: '/assigned',
     ADVISORY: '/advisor',
-    ALLREQ: '/allreq',
+    ALLREQ: '/all-request',
     NEW_ASSIGNED: '/new-assigned',
     KNOWLEDGE: '/knowledge',
     CARROT: '/knowledge/item',

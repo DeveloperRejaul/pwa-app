@@ -24,9 +24,11 @@ export default function Shedule() {
         <div className="">
             <table className="w-full">
                 <thead className="font-medium text-base text-gray">
-                    {tHead.map((d, i) => (
-                        <th key={i} className="pb-2">{d}</th>
-                    ))}
+                    <tr>
+                        {tHead.map((d, i) => (
+                            <th key={i} className="pb-2">{d}</th>
+                        ))}
+                    </tr>
                 </thead>
                 <tbody>
                     <tr>
